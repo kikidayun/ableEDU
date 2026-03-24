@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>(주)에이블 수업 운영 자료실</title>
+  <title>수업 운영 자료실</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -249,7 +249,7 @@
     place-items:center;
     margin-bottom:0;
     font-size:22px;
-    background:var(--primary-soft);
+    background:transparent;
     color:var(--primary);
   }
 
@@ -290,6 +290,24 @@
     margin-top:2px;
   }
 
+  .icon{
+    width:52px;
+    height:52px;
+    border-radius:12px;
+    overflow:hidden;
+    background:transparent;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex:0 0 48px;
+  }
+
+  .icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
   .accordion-group{display:grid;gap:14px;}
 
   .program-box{
@@ -304,11 +322,11 @@
     width:100%;
     border:0;
     background:#fff;
-    padding:20px 22px;
+    padding:18px 20px;
     display:flex;
-    align-items:flex-start;
+    align-items:center;
     justify-content:space-between;
-    gap:14px;
+    gap:12px;
     text-align:left;
     cursor:pointer;
   }
@@ -369,7 +387,7 @@
 
   .accordion-panel{
     display:none;
-    padding:20px 22px 22px;
+    padding:20px 20px 20px;
     border-top:1px solid var(--line);
     background:#fff;
   }
@@ -495,7 +513,13 @@
   .type-pdf{background:var(--green-soft);color:var(--green);}
   .type-hwp{background:var(--gray-soft);color:var(--gray);}
   .type-file{background:var(--orange-soft);color:var(--orange);}
-  .type-zep{background:var(--purple-soft);color:var(--purple);}
+  .type-zep-sports{background:#f3e8ff;  color:#7c3aed;}
+  /* 기본 방탈출 (입문 / 안정) */
+  .type-zep-basic{background:#ecfdf5;  color:#16a34a;}
+  /* 초급 방탈출 (집중 / 일반 난이도) */
+  .type-zep-escape{background:#eff6ff;  color:#2563eb;}
+  /* 중급/확장용 (난이도 ↑ / 강조) */
+  .type-zep-advanced{background:#fff7ed;  color:#ea580c;}
 
   .title-cell{min-width:0;}
 
@@ -836,8 +860,8 @@
     <header class="hero">
       <div class="hero-top">
         <div class="hero-text">
-          <h1>(주)에이블 수업 운영 자료실</h1>
-          <p>수업에 필요한 사이트, 파일, ZEP 링크를 한곳에서 빠르게 찾아 활용할 수 있도록 정리한 내부 운영 페이지입니다.</p>
+          <h1>🌟💖💫 수업자료 ✨💖✨</h1>
+          <p>✨완벽한 수업을 위한 설계도 (Ver.1/0)💫</p>
         </div>
 
         <div class="hero-shortcuts">
@@ -852,7 +876,7 @@
           <input type="text" id="searchInput" placeholder="프로그램명, 자료명, 키워드 검색" />
         </div>
         <div class="filter-list">
-          <button class="filter-btn active" data-filter="all">전체</button>
+          <!-- <button class="filter-btn active" data-filter="all">전체</button> -->
           <button class="filter-btn" data-filter="common">수업 플랫폼</button>
           <button class="filter-btn" data-filter="program">프로그램</button>
           <button class="filter-btn" data-filter="zep">ZEP</button>
@@ -863,8 +887,8 @@
     <section class="section" data-group="common">
       <div class="section-head">
         <div>
-          <h2>수업 플랫폼</h2>
-          <p>수업 전 활용하기 좋은 플랫폼 모음</p>
+          <h2>📚 수업 플랫폼</h2>
+          <!-- <p>수업 전 활용하기 좋은 플랫폼 모음</p> -->
         </div>
       </div>
 
@@ -886,7 +910,7 @@
             <div class="quick-grid quick-grid-inside">
 
               <div class="quick-link">
-                <div class="icon">✏️</div>
+                <div class="icon"><img src="./icons/quickdraw.png" alt="퀵드로우"></div>
                 <h3>퀵드로우 <br><small style="font-size:12px; color:var(--gray);">(Quick Draw)</small></h3>
                 <div class="quick-link-bottom">
                   <div class="quick-actions">
@@ -900,7 +924,7 @@
               </div>
 
               <div class="quick-link">
-                <div class="icon">🎨</div>
+                <div class="icon"><img src="./icons/autodraw.png" alt="오토드로우"></div>
                 <h3>오토드로우 <br><small style="font-size:12px; color:var(--gray);">(Auto Draw)</small></h3>
                 <div class="quick-link-bottom">
                   <div class="quick-actions">
@@ -914,7 +938,7 @@
               </div>
 
               <div class="quick-link">
-                <div class="icon">🧠</div>
+                <div class="icon"><img src="./icons/teachablemachine.png" alt="티처블머신"></div>
                 <h3>티처블머신 <br><small style="font-size:12px; color:var(--gray);">(Teachable Machine)</small></h3>
                 <div class="quick-link-bottom">
                   <div class="quick-actions">
@@ -928,7 +952,7 @@
               </div>
 
               <div class="quick-link">
-                <div class="icon">🚗</div>
+                <div class="icon"><img src="./icons/moralmachine.png" alt="모럴머신"></div>
                 <h3>모럴머신 <br><small style="font-size:12px; color:var(--gray);">(moralmachine)</small></h3>
                 <div class="quick-link-bottom">
                   <div class="quick-actions">
@@ -942,7 +966,7 @@
               </div>
 
               <div class="quick-link">
-                <div class="icon">🤖</div>
+                <div class="icon"><img src="./icons/entry.png" alt="엔트리"></div>
                 <h3>엔트리 <br><small style="font-size:12px; color:var(--gray);">(Entry)</small></h3>
                 <div class="quick-link-bottom">
                   <div class="quick-actions">
@@ -956,7 +980,7 @@
               </div>
 
               <div class="quick-link">
-                <div class="icon">🎮</div>
+                <div class="icon"><img src="./icons/entry2.png" alt="엔트리"></div>
                 <h3>AI 운동·게임 실습 <br><small style="font-size:12px; color:var(--gray);">(Entry)</small></h3>
                 <div class="quick-link-bottom">
                   <div class="quick-actions">
@@ -970,7 +994,7 @@
               </div>
 
               <div class="quick-link">
-                <div class="icon">🎵</div>
+                <div class="icon"><img src="./icons/kandinsky.png" alt="칸딘스키"></div>
                 <h3>칸딘스키 <br><small style="font-size:12px; color:var(--gray);">(Kandinsky)</small></h3>
                 <div class="quick-link-bottom">
                   <div class="quick-actions">
@@ -984,7 +1008,7 @@
               </div>
 
               <div class="quick-link">
-                <div class="icon">🎃</div>
+                <div class="icon"><img src="./icons/scroobly.png" alt="스크루블리"></div>
                 <h3>스크루블리 <br><small style="font-size:12px; color:var(--gray);">(scroobly)</small></h3>
                 <div class="quick-link-bottom">
                   <div class="quick-actions">
@@ -998,7 +1022,7 @@
               </div>
 
               <div class="quick-link">
-                <div class="icon">🐟</div>
+                <div class="icon"><img src="./icons/aiforoceans.png" alt="해양AI"></div>
                 <h3>해양분야를 위한 AI <br><small style="font-size:12px; color:var(--gray);">(AI for Oceans)</small></h3>
                 <div class="quick-link-bottom">
                   <div class="quick-actions">
@@ -1012,15 +1036,15 @@
               </div>
 
               <div class="quick-link">
-                <div class="icon">📷</div>
-                <h3>사진 속 진짜 가짜 <br><small style="font-size:12px; color:var(--gray);">(who is real)</small></h3>
+                <div class="icon"><img src="./icons/faceisreal.png" alt="whichfaceisreal"></div>
+                <h3>사진 속 진짜 가짜 <br><small style="font-size:12px; color:var(--gray);">(Which Face Is Real?)</small></h3>
                 <div class="quick-link-bottom">
                   <div class="quick-actions">
                     <a class="btn primary" href="https://whichfaceisreal.com/" target="_blank">열기</a>
                     <button class="btn copy" data-copy="https://whichfaceisreal.com/">복사</button>
                   </div>
                   <div class="quick-qr-area">
-                    <button class="btn qr" data-qr-title="AI for Oceans" data-qr-url="https://whichfaceisreal.com/">QR</button>
+                    <button class="btn qr" data-qr-title="whichfaceisreal" data-qr-url="https://whichfaceisreal.com/">QR</button>
                   </div>
                 </div>
               </div>
@@ -1045,7 +1069,7 @@
             <div class="quick-grid quick-grid-inside">
 
               <div class="quick-link">
-                <div class="icon">💡</div>
+                <div class="icon"><img src="./icons/Arduino.png" alt="아두이노"></div>
                 <h3>아두이노 <br><small style="font-size:12px; color:var(--gray);">(arduino)</small></h3>
                 <div class="quick-link-bottom">
                   <div class="quick-actions">
@@ -1059,7 +1083,7 @@
               </div>
 
               <div class="quick-link">
-                <div class="icon">⌨️</div>
+                <div class="icon"><img src="./icons/googlecolab.png" alt="구글 코랩"></div>
                 <h3>구글 코랩 <br><small style="font-size:12px; color:var(--gray);">(Colab)</small></h3>
                 <div class="quick-link-bottom">
                   <div class="quick-actions">
@@ -1073,7 +1097,7 @@
               </div>
 
               <div class="quick-link">
-                <div class="icon">📄</div>
+                 <div class="icon"><img src="./icons/github.png" alt="깃허브"></div>
                 <h3>에이블 깃허브 <br><small style="font-size:12px; color:var(--gray);">(ABLE github)</small></h3>
                 <div class="quick-link-bottom">
                   <div class="quick-actions">
@@ -1082,6 +1106,20 @@
                   </div>
                   <div class="quick-qr-area">
                     <button class="btn qr" data-qr-title="에이블 깃허브" data-qr-url="https://github.com/able0220/able0220">QR</button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="quick-link">
+                 <div class="icon"><img src="./icons/mentimeter.png" alt="멘티미터"></div>
+                <h3>멘티미터 <br><small style="font-size:12px; color:var(--gray);">(mentimeter)</small></h3>
+                <div class="quick-link-bottom">
+                  <div class="quick-actions">
+                    <a class="btn primary" href="https://www.mentimeter.com/" target="_blank">열기</a>
+                    <button class="btn copy" data-copy="https://www.mentimeter.com/">복사</button>
+                  </div>
+                  <div class="quick-qr-area">
+                    <button class="btn qr" data-qr-title="멘티미터" data-qr-url="https://www.mentimeter.com/">QR</button>
                   </div>
                 </div>
               </div>
@@ -1106,7 +1144,7 @@
             <div class="quick-grid quick-grid-inside">
 
               <div class="quick-link">
-                <div class="icon">💻</div>
+                <div class="icon"><img src="./icons/vscode.png" alt="비주얼스튜디오코드"></div>
                 <h3>비주얼스튜디오코드 <br><small style="font-size:12px; color:var(--gray);">(VS Code)</small></h3>
                 <div class="quick-link-bottom">
                   <div class="quick-actions">
@@ -1120,7 +1158,7 @@
               </div>
 
               <div class="quick-link">
-                <div class="icon">🧠</div>
+                <div class="icon"><img src="./icons/gpt.png" alt="chatGPT"></div>
                 <h3>챗 지피티 <br><small style="font-size:12px; color:var(--gray);">(chatGPT)</small></h3>
                 <div class="quick-link-bottom">
                   <div class="quick-actions">
@@ -1134,7 +1172,7 @@
               </div>
 
               <div class="quick-link">
-                <div class="icon">🧠</div>
+                <div class="icon"><img src="./icons/gemini.png" alt="gemini"></div>
                 <h3>제미나이 <br><small style="font-size:12px; color:var(--gray);">(Gemini)</small></h3>
                 <div class="quick-link-bottom">
                   <div class="quick-actions">
@@ -1148,7 +1186,7 @@
               </div>
 
               <div class="quick-link">
-                <div class="icon">🧠</div>
+                <div class="icon"><img src="./icons/wrtn.png" alt="뤼튼"></div>
                 <h3>뤼튼 <br><small style="font-size:12px; color:var(--gray);">(wrtn)</small></h3>
                 <div class="quick-link-bottom">
                   <div class="quick-actions">
@@ -1181,7 +1219,7 @@
             <div class="quick-grid quick-grid-inside">
 
               <div class="quick-link">
-                <div class="icon">🕶️</div>
+                <div class="icon"><img src="./icons/delightexedu.png" alt="딜라이텍스"></div>
                 <h3>딜라이텍스 에듀 <br><small style="font-size:12px; color:var(--gray);">(Delightex EDU)</small></h3>
                 <div class="quick-link-bottom">
                   <div class="quick-actions">
@@ -1195,7 +1233,7 @@
               </div>
 
               <div class="quick-link">
-                <div class="icon">📱</div>
+                <div class="icon"><img src="./icons/appinventor.png" alt="앱인벤터"></div>
                 <h3>앱 인벤터 <br><small style="font-size:12px; color:var(--gray);">(App Inventor)</small></h3>
                 <div class="quick-link-bottom">
                   <div class="quick-actions">
@@ -1227,7 +1265,7 @@
             <div class="quick-grid quick-grid-inside">
 
               <div class="quick-link">
-                <div class="icon">👻</div>
+                <div class="icon"><img src="./icons/AnimatedDrawings.png" alt="AI 캐릭터"></div>
                 <h3>AI 캐릭터 <br><small style="font-size:12px; color:var(--gray);">(Animated Drawings)</small></h3>
                 <div class="quick-link-bottom">
                   <div class="quick-actions">
@@ -1241,7 +1279,7 @@
               </div>
 
               <div class="quick-link">
-                <div class="icon">📚</div>
+                <div class="icon"><img src="./icons/canva.png" alt="캔바"></div>
                 <h3>캔바 <br><small style="font-size:12px; color:var(--gray);">(Canva)</small></h3>
                 <div class="quick-link-bottom">
                   <div class="quick-actions">
@@ -1255,7 +1293,7 @@
               </div>
 
               <div class="quick-link">
-                <div class="icon">🖼️</div>
+                 <div class="icon"><img src="./icons/miricanvas.png" alt="미리캔버스"></div>
                 <h3>미리캔버스 <br><small style="font-size:12px; color:var(--gray);">(Miricanvas)</small></h3>
                 <div class="quick-link-bottom">
                   <div class="quick-actions">
@@ -1269,7 +1307,7 @@
               </div>
 
               <div class="quick-link">
-                <div class="icon">🕸️</div>
+                <div class="icon"><img src="./icons/tinkercad.png" alt="팅커캐드"></div>
                 <h3>팅커캐드 <br><small style="font-size:12px; color:var(--gray);">(tinkercad)</small></h3>
                 <div class="quick-link-bottom">
                   <div class="quick-actions">
@@ -1291,7 +1329,7 @@
     <section class="section" data-group="program">
       <div class="section-head">
         <div>
-          <h2>프로그램별 자료</h2>
+          <h2>📄 프로그램별 자료</h2>
         </div>
       </div>
 
@@ -1659,6 +1697,18 @@
                   <a class="btn" href="./files/content/studyplanner.aia" download>다운로드</a>
                 </div>
               </div>
+
+              <div class="resource-row">
+                <div><span class="type-badge type-file">FILE</span></div>
+                <div class="title-cell">
+                  <div class="resource-title">타이머.aia</div>
+                </div>
+                <div class="resource-desc">공유용 (패들렛)</div>
+                <div class="actions">
+                  <a class="btn" href="./files/content/timer.aia" download>다운로드</a>
+                </div>
+              </div>
+
             </div> </div>
         </article>
 
@@ -1945,698 +1995,563 @@
     <section class="section" data-group="zep">
       <div class="section-head">
         <div>
-          <h2>ZEP 맵 자료</h2>
-          <p>맵명 클릭 후 반별 버튼을 누르면 해당 링크 카드가 보이는 구조입니다.</p>
+          <h2>🕹️ ZEP 맵 자료</h2>
+          <!-- <p>프로그램 클릭 후 버튼을 누르면 해당 QR이 보이는 구조입니다.</p> -->
         </div>
       </div>
 
       <div class="accordion-group">
-        <article class="program-box searchable" data-type="zep" data-keywords="zep 미니운동회 운동회 30명 20명 10명">
+        <article class="program-box searchable" data-type="zep" data-keywords="메타버스 zep 미니운동회 초등 기본 방탈출 초급 10명" data-password="1234">
           <button class="accordion-btn" type="button">
             <div class="accordion-left">
-              <h3>미니운동회</h3>
-              <p>30명용 2개반, 20명용 1개반, 10명용 3개반으로 나누어 관리합니다.</p>
+              <h3>🐣 메타버스 초등</h3>
+              <p>QR 1개당 10명 입장 가능 [개별 입장]</p>
             </div>
             <div class="accordion-right">
-              <div class="count-badge">6반</div>
+              <div class="count-badge">4개</div>
               <div class="accordion-icon">⌄</div>
             </div>
           </button>
 
-          <div class="accordion-panel">
-            <div class="zep-subtabs">
-              <button class="btn subtab active" data-zep-target="sports-30-a">30명용 1반</button>
-              <button class="btn subtab" data-zep-target="sports-30-b">30명용 2반</button>
-              <button class="btn subtab" data-zep-target="sports-20-a">20명용 1반</button>
-              <button class="btn subtab" data-zep-target="sports-10-a">10명용 1반</button>
-              <button class="btn subtab" data-zep-target="sports-10-b">10명용 2반</button>
-              <button class="btn subtab" data-zep-target="sports-10-c">10명용 3반</button>
-            </div>
 
-            <div class="zep-panel active" id="sports-30-a">
-              <div class="zep-card-grid zep-grid-1">
-                <div class="zep-card">
-                  <span class="type-badge type-zep">ZEP</span>
-                  <div class="resource-title">미니운동회 기본1</div>
-                  <div class="meta">30명 입장 가능</div>
-                  <div class="card-actions">
-                    <a class="btn primary" href="https://zep.us/play/2eVdlK" target="_blank">입장하기</a>
-                    <button class="btn copy" data-copy="https://zep.us/play/2eVdlK">복사</button>
-                    <button class="btn qr" data-qr-title="미니운동회 기본1" data-qr-url="https://zep.us/play/2eVdlK">QR</button>
-                  </div>
+          <div class="accordion-panel" style="padding-top: 20px;"> <div class="zep-card-grid zep-grid-4">
+              <div class="zep-card">
+                <span class="type-badge type-zep-sports">ZEP</span>
+                <div class="resource-title">미니운동회 01</div>
+                <div class="meta">zep.us/play/8JG5Y1</div>
+                <div class="card-actions">
+                  <a class="btn primary" href="https://zep.us/play/8JG5Y1" target="_blank">입장하기</a>
+                  <button class="btn copy" data-copy="https://zep.us/play/8JG5Y1">복사</button>
+                  <button class="btn qr" data-qr-title="미니운동회 01" data-qr-url="https://zep.us/play/8JG5Y1">QR</button>
                 </div>
               </div>
-            </div>
-
-            <div class="zep-panel" id="sports-30-b">
-              <div class="zep-card-grid zep-grid-1">
-                <div class="zep-card">
-                  <span class="type-badge type-zep">ZEP</span>
-                  <div class="resource-title">미니운동회 기본2</div>
-                  <div class="meta">30명 입장 가능</div>
-                  <div class="card-actions">
-                    <a class="btn primary" href="https://zep.us/play/8Lp0nM" target="_blank">입장하기</a>
-                    <button class="btn copy" data-copy="https://zep.us/play/8Lp0nM">복사</button>
-                    <button class="btn qr" data-qr-title="미니운동회 기본2" data-qr-url="https://zep.us/play/8Lp0nM">QR</button>
-                  </div>
+              <div class="zep-card">
+                <span class="type-badge type-zep-sports">ZEP</span>
+                <div class="resource-title">미니운동회 02</div>
+                <div class="meta">zep.us/play/dJjWMR</div>
+                <div class="card-actions">
+                  <a class="btn primary" href="https://zep.us/play/dJjWMR" target="_blank">입장하기</a>
+                  <button class="btn copy" data-copy="https://zep.us/play/dJjWMR">복사</button>
+                  <button class="btn qr" data-qr-title="미니운동회 02" data-qr-url="https://zep.us/play/dJjWMR">QR</button>
                 </div>
               </div>
-            </div>
-
-            <div class="zep-panel" id="sports-20-a">
-              <div class="zep-card-grid zep-grid-1">
-                <div class="zep-card">
-                  <span class="type-badge type-zep">ZEP</span>
-                  <div class="resource-title">미니운동회 기본3</div>
-                  <div class="meta">20명 입장 가능</div>
-                  <div class="card-actions">
-                    <a class="btn primary" href="https://zep.us/play/dJB6q5" target="_blank">입장하기</a>
-                    <button class="btn copy" data-copy="https://zep.us/play/dJB6q5">복사</button>
-                    <button class="btn qr" data-qr-title="미니운동회 기본3" data-qr-url="https://zep.us/play/dJB6q5">QR</button>
-                  </div>
+              <div class="zep-card">
+                <span class="type-badge type-zep-sports">ZEP</span>
+                <div class="resource-title">미니운동회 03</div>
+                <div class="meta">zep.us/play/474aG6</div>
+                <div class="card-actions">
+                  <a class="btn primary" href="https://zep.us/play/474aG6" target="_blank">입장하기</a>
+                  <button class="btn copy" data-copy="https://zep.us/play/474aG6">복사</button>
+                  <button class="btn qr" data-qr-title="미니운동회 03" data-qr-url="https://zep.us/play/474aG6">QR</button>
                 </div>
               </div>
-            </div>
-
-            <div class="zep-panel" id="sports-10-a">
-              <div class="zep-card-grid zep-grid-3">
-                <div class="zep-card">
-                  <span class="type-badge type-zep">ZEP</span>
-                  <div class="resource-title">미니운동회1</div>
-                  <div class="meta">10명 입장 가능</div>
-                  <div class="card-actions">
-                    <a class="btn primary" href="https://zep.us/play/5rYLqV" target="_blank">입장하기</a>
-                    <button class="btn copy" data-copy="https://zep.us/play/5rYLqV">복사</button>
-                    <button class="btn qr" data-qr-title="미니운동회1" data-qr-url="https://zep.us/play/5rYLqV">QR</button>
-                  </div>
-                </div>
-                <div class="zep-card">
-                  <span class="type-badge type-zep">ZEP</span>
-                  <div class="resource-title">미니운동회2</div>
-                  <div class="meta">10명 입장 가능</div>
-                  <div class="card-actions">
-                    <a class="btn primary" href="https://zep.us/play/N3G7Y7" target="_blank">입장하기</a>
-                    <button class="btn copy" data-copy="https://zep.us/play/N3G7Y7">복사</button>
-                    <button class="btn qr" data-qr-title="미니운동회2" data-qr-url="https://zep.us/play/N3G7Y7">QR</button>
-                  </div>
-                </div>
-                <div class="zep-card">
-                  <span class="type-badge type-zep">ZEP</span>
-                  <div class="resource-title">미니운동회3</div>
-                  <div class="meta">10명 입장 가능</div>
-                  <div class="card-actions">
-                    <a class="btn primary" href="https://zep.us/play/yxnK5O" target="_blank">입장하기</a>
-                    <button class="btn copy" data-copy="https://zep.us/play/yxnK5O">복사</button>
-                    <button class="btn qr" data-qr-title="미니운동회3" data-qr-url="https://zep.us/play/yxnK5O">QR</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="zep-panel" id="sports-10-b">
-              <div class="zep-card-grid zep-grid-3">
-                <div class="zep-card">
-                  <span class="type-badge type-zep">ZEP</span>
-                  <div class="resource-title">미니운동회4</div>
-                  <div class="meta">10명 입장 가능</div>
-                  <div class="card-actions">
-                    <a class="btn primary" href="https://zep.us/play/DKY0qY" target="_blank">입장하기</a>
-                    <button class="btn copy" data-copy="https://zep.us/play/DKY0qY">복사</button>
-                    <button class="btn qr" data-qr-title="미니운동회4" data-qr-url="https://zep.us/play/DKY0qY">QR</button>
-                  </div>
-                </div>
-                <div class="zep-card">
-                  <span class="type-badge type-zep">ZEP</span>
-                  <div class="resource-title">미니운동회5</div>
-                  <div class="meta">10명 입장 가능</div>
-                  <div class="card-actions">
-                    <a class="btn primary" href="https://zep.us/play/2mGjqY" target="_blank">입장하기</a>
-                    <button class="btn copy" data-copy="https://zep.us/play/2mGjqY">복사</button>
-                    <button class="btn qr" data-qr-title="미니운동회5" data-qr-url="https://zep.us/play/2mGjqY">QR</button>
-                  </div>
-                </div>
-                <div class="zep-card">
-                  <span class="type-badge type-zep">ZEP</span>
-                  <div class="resource-title">미니운동회6</div>
-                  <div class="meta">10명 입장 가능</div>
-                  <div class="card-actions">
-                    <a class="btn primary" href="https://zep.us/play/DKkNNm" target="_blank">입장하기</a>
-                    <button class="btn copy" data-copy="https://zep.us/play/DKkNNm">복사</button>
-                    <button class="btn qr" data-qr-title="미니운동회6" data-qr-url="https://zep.us/play/DKkNNm">QR</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="zep-panel" id="sports-10-c">
-              <div class="zep-card-grid zep-grid-3">
-                <div class="zep-card">
-                  <span class="type-badge type-zep">ZEP</span>
-                  <div class="resource-title">미니운동회7</div>
-                  <div class="meta">10명 입장 가능</div>
-                  <div class="card-actions">
-                    <a class="btn primary" href="https://zep.us/play/2pRKKg" target="_blank">입장하기</a>
-                    <button class="btn copy" data-copy="https://zep.us/play/2pRKKg">복사</button>
-                    <button class="btn qr" data-qr-title="미니운동회7" data-qr-url="https://zep.us/play/2pRKKg">QR</button>
-                  </div>
-                </div>
-                <div class="zep-card">
-                  <span class="type-badge type-zep">ZEP</span>
-                  <div class="resource-title">미니운동회8</div>
-                  <div class="meta">10명 입장 가능</div>
-                  <div class="card-actions">
-                    <a class="btn primary" href="https://zep.us/play/8lA4pg" target="_blank">입장하기</a>
-                    <button class="btn copy" data-copy="https://zep.us/play/8lA4pg">복사</button>
-                    <button class="btn qr" data-qr-title="미니운동회8" data-qr-url="https://zep.us/play/8lA4pg">QR</button>
-                  </div>
-                </div>
-                <div class="zep-card">
-                  <span class="type-badge type-zep">ZEP</span>
-                  <div class="resource-title">미니운동회9</div>
-                  <div class="meta">10명 입장 가능</div>
-                  <div class="card-actions">
-                    <a class="btn primary" href="https://zep.us/play/y1JBnO" target="_blank">입장하기</a>
-                    <button class="btn copy" data-copy="https://zep.us/play/y1JBnO">복사</button>
-                    <button class="btn qr" data-qr-title="미니운동회9" data-qr-url="https://zep.us/play/y1JBnO">QR</button>
-                  </div>
+              <div class="zep-card">
+                <span class="type-badge type-zep-sports">ZEP</span>
+                <div class="resource-title">미니운동회 04</div>
+                <div class="meta">zep.us/play/0EaYwB</div>
+                <div class="card-actions">
+                  <a class="btn primary" href="https://zep.us/play/0EaYwB" target="_blank">입장하기</a>
+                  <button class="btn copy" data-copy="https://zep.us/play/0EaYwB">복사</button>
+                  <button class="btn qr" data-qr-title="미니운동회 04" data-qr-url="https://zep.us/play/0EaYwB">QR</button>
                 </div>
               </div>
             </div>
           </div>
-        </article>
 
-        <article class="program-box searchable" data-type="zep" data-keywords="zep 기본 방탈출 30명 20명 10명">
-          <button class="accordion-btn" type="button">
-            <div class="accordion-left">
-              <h3>기본 방탈출</h3>
-              <p>30명용 2개반, 20명용 1개반, 10명용 3개반으로 나누어 관리합니다.</p>
-            </div>
-            <div class="accordion-right">
-              <div class="count-badge">6반</div>
-              <div class="accordion-icon">⌄</div>
-            </div>
-          </button>
-
-          <div class="accordion-panel">
-            <div class="zep-subtabs">
-              <button class="btn subtab active" data-zep-target="basic-30-a">30명용 1반</button>
-              <button class="btn subtab" data-zep-target="basic-30-b">30명용 2반</button>
-              <button class="btn subtab" data-zep-target="basic-20-a">20명용 1반</button>
-              <button class="btn subtab" data-zep-target="basic-10-a">10명용 1반</button>
-              <button class="btn subtab" data-zep-target="basic-10-b">10명용 2반</button>
-              <button class="btn subtab" data-zep-target="basic-10-c">10명용 3반</button>
-            </div>
-
-            <div class="zep-panel active" id="basic-30-a">
-              <div class="zep-card-grid zep-grid-1">
-                <div class="zep-card">
-                  <span class="type-badge type-zep">ZEP</span>
-                  <div class="resource-title">방탈출 기본1</div>
-                  <div class="meta">30명 입장 가능</div>
-                  <div class="card-actions">
-                    <a class="btn primary" href="https://zep.us/play/87xmZ7" target="_blank">입장하기</a>
-                    <button class="btn copy" data-copy="https://zep.us/play/87xmZ7">복사</button>
-                    <button class="btn qr" data-qr-title="방탈출 기본1" data-qr-url="https://zep.us/play/87xmZ7">QR</button>
-                  </div>
+          <div class="accordion-panel" style="padding-top: 20px;"> <div class="zep-card-grid zep-grid-4">
+              <div class="zep-card">
+                <span class="type-badge type-zep-basic">ZEP</span>
+                <div class="resource-title">기본 방탈출 01</div>
+                <div class="meta">zep.us/play/LBwdZA</div>
+                <div class="card-actions">
+                  <a class="btn primary" href="https://zep.us/play/LBwdZA" target="_blank">입장하기</a>
+                  <button class="btn copy" data-copy="https://zep.us/play/LBwdZA">복사</button>
+                  <button class="btn qr" data-qr-title="기본 방탈출 01" data-qr-url="https://zep.us/play/LBwdZA">QR</button>
                 </div>
               </div>
-            </div>
-
-            <div class="zep-panel" id="basic-30-b">
-              <div class="zep-card-grid zep-grid-1">
-                <div class="zep-card">
-                  <span class="type-badge type-zep">ZEP</span>
-                  <div class="resource-title">방탈출 기본2</div>
-                  <div class="meta">30명 입장 가능</div>
-                  <div class="card-actions">
-                    <a class="btn primary" href="https://zep.us/play/8AA0mW" target="_blank">입장하기</a>
-                    <button class="btn copy" data-copy="https://zep.us/play/8AA0mW">복사</button>
-                    <button class="btn qr" data-qr-title="방탈출 기본2" data-qr-url="https://zep.us/play/8AA0mW">QR</button>
-                  </div>
+              <div class="zep-card">
+                <span class="type-badge type-zep-basic">ZEP</span>
+                <div class="resource-title">기본 방탈출 02</div>
+                <div class="meta">zep.us/play/nLPYrv</div>
+                <div class="card-actions">
+                  <a class="btn primary" href="https://zep.us/play/nLPYrv" target="_blank">입장하기</a>
+                  <button class="btn copy" data-copy="https://zep.us/play/nLPYrv">복사</button>
+                  <button class="btn qr" data-qr-title="기본 방탈출 02" data-qr-url="https://zep.us/play/nLPYrv">QR</button>
                 </div>
               </div>
-            </div>
-
-            <div class="zep-panel" id="basic-20-a">
-              <div class="zep-card-grid zep-grid-1">
-                <div class="zep-card">
-                  <span class="type-badge type-zep">ZEP</span>
-                  <div class="resource-title">방탈출 기본3</div>
-                  <div class="meta">20명 입장 가능</div>
-                  <div class="card-actions">
-                    <a class="btn primary" href="https://zep.us/play/1GlBYo" target="_blank">입장하기</a>
-                    <button class="btn copy" data-copy="https://zep.us/play/1GlBYo">복사</button>
-                    <button class="btn qr" data-qr-title="방탈출 기본3" data-qr-url="https://zep.us/play/1GlBYo">QR</button>
-                  </div>
+              <div class="zep-card">
+                <span class="type-badge type-zep-basic">ZEP</span>
+                <div class="resource-title">기본 방탈출 03</div>
+                <div class="meta">zep.us/play/5rnXEV</div>
+                <div class="card-actions">
+                  <a class="btn primary" href="https://zep.us/play/5rnXEV" target="_blank">입장하기</a>
+                  <button class="btn copy" data-copy="https://zep.us/play/5rnXEV">복사</button>
+                  <button class="btn qr" data-qr-title="기본 방탈출 03" data-qr-url="https://zep.us/play/5rnXEV">QR</button>
                 </div>
               </div>
-            </div>
-
-            <div class="zep-panel" id="basic-10-a">
-              <div class="zep-card-grid zep-grid-3">
-                <div class="zep-card">
-                  <span class="type-badge type-zep">ZEP</span>
-                  <div class="resource-title">방탈출 기본1</div>
-                  <div class="meta">10명 입장 가능</div>
-                  <div class="card-actions">
-                    <a class="btn primary" href="https://zep.us/play/Z91lYj" target="_blank">입장하기</a>
-                    <button class="btn copy" data-copy="https://zep.us/play/Z91lYj">복사</button>
-                    <button class="btn qr" data-qr-title="방탈출 기본1" data-qr-url="https://zep.us/play/Z91lYj">QR</button>
-                  </div>
-                </div>
-                <div class="zep-card">
-                  <span class="type-badge type-zep">ZEP</span>
-                  <div class="resource-title">방탈출 기본2</div>
-                  <div class="meta">10명 입장 가능</div>
-                  <div class="card-actions">
-                    <a class="btn primary" href="https://zep.us/play/R5gL3r" target="_blank">입장하기</a>
-                    <button class="btn copy" data-copy="https://zep.us/play/R5gL3r">복사</button>
-                    <button class="btn qr" data-qr-title="방탈출 기본2" data-qr-url="https://zep.us/play/R5gL3r">QR</button>
-                  </div>
-                </div>
-                <div class="zep-card">
-                  <span class="type-badge type-zep">ZEP</span>
-                  <div class="resource-title">방탈출 기본3</div>
-                  <div class="meta">10명 입장 가능</div>
-                  <div class="card-actions">
-                    <a class="btn primary" href="https://zep.us/play/AOEYzW" target="_blank">입장하기</a>
-                    <button class="btn copy" data-copy="https://zep.us/play/AOEYzW">복사</button>
-                    <button class="btn qr" data-qr-title="방탈출 기본3" data-qr-url="https://zep.us/play/AOEYzW">QR</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="zep-panel" id="basic-10-b">
-              <div class="zep-card-grid zep-grid-3">
-                <div class="zep-card">
-                  <span class="type-badge type-zep">ZEP</span>
-                  <div class="resource-title">방탈출 기본4</div>
-                  <div class="meta">10명 입장 가능</div>
-                  <div class="card-actions">
-                    <a class="btn primary" href="https://zep.us/play/2NaZ6X" target="_blank">입장하기</a>
-                    <button class="btn copy" data-copy="https://zep.us/play/2NaZ6X">복사</button>
-                    <button class="btn qr" data-qr-title="방탈출 기본4" data-qr-url="https://zep.us/play/2NaZ6X">QR</button>
-                  </div>
-                </div>
-                <div class="zep-card">
-                  <span class="type-badge type-zep">ZEP</span>
-                  <div class="resource-title">방탈출 기본5</div>
-                  <div class="meta">10명 입장 가능</div>
-                  <div class="card-actions">
-                    <a class="btn primary" href="https://zep.us/play/2Rv3QZ" target="_blank">입장하기</a>
-                    <button class="btn copy" data-copy="https://zep.us/play/2Rv3QZ">복사</button>
-                    <button class="btn qr" data-qr-title="방탈출 기본5" data-qr-url="https://zep.us/play/2Rv3QZ">QR</button>
-                  </div>
-                </div>
-                <div class="zep-card">
-                  <span class="type-badge type-zep">ZEP</span>
-                  <div class="resource-title">방탈출 기본6</div>
-                  <div class="meta">10명 입장 가능</div>
-                  <div class="card-actions">
-                    <a class="btn primary" href="https://zep.us/play/DER4QN" target="_blank">입장하기</a>
-                    <button class="btn copy" data-copy="https://zep.us/play/DER4QN">복사</button>
-                    <button class="btn qr" data-qr-title="방탈출 기본6" data-qr-url="https://zep.us/play/DER4QN">QR</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="zep-panel" id="basic-10-c">
-              <div class="zep-card-grid zep-grid-3">
-                <div class="zep-card">
-                  <span class="type-badge type-zep">ZEP</span>
-                  <div class="resource-title">방탈출 기본7</div>
-                  <div class="meta">10명 입장 가능</div>
-                  <div class="card-actions">
-                    <a class="btn primary" href="https://zep.us/play/yogNRn" target="_blank">입장하기</a>
-                    <button class="btn copy" data-copy="https://zep.us/play/yogNRn">복사</button>
-                    <button class="btn qr" data-qr-title="방탈출 기본7" data-qr-url="https://zep.us/play/yogNRn">QR</button>
-                  </div>
-                </div>
-                <div class="zep-card">
-                  <span class="type-badge type-zep">ZEP</span>
-                  <div class="resource-title">방탈출 기본8</div>
-                  <div class="meta">10명 입장 가능</div>
-                  <div class="card-actions">
-                    <a class="btn primary" href="https://zep.us/play/8rzZJg" target="_blank">입장하기</a>
-                    <button class="btn copy" data-copy="https://zep.us/play/8rzZJg">복사</button>
-                    <button class="btn qr" data-qr-title="방탈출 기본8" data-qr-url="https://zep.us/play/8rzZJg">QR</button>
-                  </div>
-                </div>
-                <div class="zep-card">
-                  <span class="type-badge type-zep">ZEP</span>
-                  <div class="resource-title">방탈출 기본9</div>
-                  <div class="meta">10명 입장 가능</div>
-                  <div class="card-actions">
-                    <a class="btn primary" href="https://zep.us/play/D9Zg19" target="_blank">입장하기</a>
-                    <button class="btn copy" data-copy="https://zep.us/play/D9Zg19">복사</button>
-                    <button class="btn qr" data-qr-title="방탈출 기본9" data-qr-url="https://zep.us/play/D9Zg19">QR</button>
-                  </div>
+              <div class="zep-card">
+                <span class="type-badge type-zep-basic">ZEP</span>
+                <div class="resource-title">기본 방탈출 04</div>
+                <div class="meta">zep.us/play/pnj1LE</div>
+                <div class="card-actions">
+                  <a class="btn primary" href="https://zep.us/play/pnj1LE" target="_blank">입장하기</a>
+                  <button class="btn copy" data-copy="https://zep.us/play/pnj1LE">복사</button>
+                  <button class="btn qr" data-qr-title="기본 방탈출 04" data-qr-url="https://zep.us/play/pnj1LE">QR</button>
                 </div>
               </div>
             </div>
           </div>
-        </article>
-
-        <article class="program-box searchable" data-type="zep" data-keywords="zep 방탈출 초등 환경맵 10명">
-          <button class="accordion-btn" type="button">
-            <div class="accordion-left">
-              <h3>초등 환경맵</h3>
-              <p>10명용 2개반으로 나누어 관리합니다.</p>
-            </div>
-            <div class="accordion-right">
-              <div class="count-badge">2반</div>
-              <div class="accordion-icon">⌄</div>
-            </div>
-          </button>
-
-          <div class="accordion-panel">
-            <div class="zep-subtabs">
-              <button class="btn subtab active" data-zep-target="env-10-a">10명용 1반</button>
-              <button class="btn subtab" data-zep-target="env-10-b">10명용 2반</button>
-            </div>
-
-            <div class="zep-panel active" id="env-10-a">
-              <div class="zep-card-grid zep-grid-3">
-                <div class="zep-card">
-                  <span class="type-badge type-zep">ZEP</span>
-                  <div class="resource-title">초등 환경맵1</div>
-                  <div class="meta">10명 입장 가능</div>
-                  <div class="card-actions">
-                    <a class="btn primary" href="https://zep.us/play/aWbYJR" target="_blank">입장하기</a>
-                    <button class="btn copy" data-copy="https://zep.us/play/aWbYJR">복사</button>
-                    <button class="btn qr" data-qr-title="초등 환경맵 1반-1" data-qr-url="https://zep.us/play/aWbYJR">QR</button>
-                  </div>
-                </div>
-                <div class="zep-card">
-                  <span class="type-badge type-zep">ZEP</span>
-                  <div class="resource-title">초등 환경맵2</div>
-                  <div class="meta">10명 입장 가능</div>
-                  <div class="card-actions">
-                    <a class="btn primary" href="https://zep.us/play/eXWQMK" target="_blank">입장하기</a>
-                    <button class="btn copy" data-copy="https://zep.us/play/eXWQMK">복사</button>
-                    <button class="btn qr" data-qr-title="초등 환경맵 1반-2" data-qr-url="https://zep.us/play/eXWQMK">QR</button>
-                  </div>
-                </div>
-                <div class="zep-card">
-                  <span class="type-badge type-zep">ZEP</span>
-                  <div class="resource-title">초등 환경맵3</div>
-                  <div class="meta">10명 입장 가능</div>
-                  <div class="card-actions">
-                    <a class="btn primary" href="https://zep.us/play/odb5JL" target="_blank">입장하기</a>
-                    <button class="btn copy" data-copy="https://zep.us/play/odb5JL">복사</button>
-                    <button class="btn qr" data-qr-title="초등 환경맵 1반-3" data-qr-url="https://zep.us/play/odb5JL">QR</button>
-                  </div>
+          
+          <div class="accordion-panel" style="padding-top: 20px;"> <div class="zep-card-grid zep-grid-4">
+              <div class="zep-card">
+                <span class="type-badge type-zep-escape">ZEP</span>
+                <div class="resource-title">초급 방탈출 01</div>
+                <div class="meta">zep.us/play/gGqvRB</div>
+                <div class="card-actions">
+                  <a class="btn primary" href="https://zep.us/play/gGqvRB" target="_blank">입장하기</a>
+                  <button class="btn copy" data-copy="https://zep.us/play/gGqvRB">복사</button>
+                  <button class="btn qr" data-qr-title="초급 방탈출 01" data-qr-url="https://zep.us/play/gGqvRB">QR</button>
                 </div>
               </div>
-            </div>
-
-            <div class="zep-panel" id="env-10-b">
-              <div class="zep-card-grid zep-grid-3">
-                <div class="zep-card">
-                  <span class="type-badge type-zep">ZEP</span>
-                  <div class="resource-title">초등 환경맵4</div>
-                  <div class="meta">10명 입장 가능</div>
-                  <div class="card-actions">
-                    <a class="btn primary" href="https://zep.us/play/mkb0lg" target="_blank">입장하기</a>
-                    <button class="btn copy" data-copy="https://zep.us/play/mkb0lg">복사</button>
-                    <button class="btn qr" data-qr-title="초등 환경맵 2반-1" data-qr-url="https://zep.us/play/mkb0lg">QR</button>
-                  </div>
+              <div class="zep-card">
+                <span class="type-badge type-zep-escape">ZEP</span>
+                <div class="resource-title">초급 방탈출 02</div>
+                <div class="meta">zep.us/play/kPAr1X</div>
+                <div class="card-actions">
+                  <a class="btn primary" href="https://zep.us/play/kPAr1X" target="_blank">입장하기</a>
+                  <button class="btn copy" data-copy="https://zep.us/play/kPAr1X">복사</button>
+                  <button class="btn qr" data-qr-title="초급 방탈출 02" data-qr-url="https://zep.us/play/kPAr1X">QR</button>
                 </div>
-                <div class="zep-card">
-                  <span class="type-badge type-zep">ZEP</span>
-                  <div class="resource-title">초등 환경맵5</div>
-                  <div class="meta">10명 입장 가능</div>
-                  <div class="card-actions">
-                    <a class="btn primary" href="https://zep.us/play/bLkROz" target="_blank">입장하기</a>
-                    <button class="btn copy" data-copy="https://zep.us/play/bLkROz">복사</button>
-                    <button class="btn qr" data-qr-title="초등 환경맵 2반-2" data-qr-url="https://zep.us/play/bLkROz">QR</button>
-                  </div>
+              </div>
+              <div class="zep-card">
+                <span class="type-badge type-zep-escape">ZEP</span>
+                <div class="resource-title">초급 방탈출 03</div>
+                <div class="meta">zep.us/play/XWr5Oj</div>
+                <div class="card-actions">
+                  <a class="btn primary" href="https://zep.us/play/XWr5Oj" target="_blank">입장하기</a>
+                  <button class="btn copy" data-copy="https://zep.us/play/XWr5Oj">복사</button>
+                  <button class="btn qr" data-qr-title="초급 방탈출 03" data-qr-url="https://zep.us/play/XWr5Oj">QR</button>
                 </div>
-                <div class="zep-card">
-                  <span class="type-badge type-zep">ZEP</span>
-                  <div class="resource-title">초등 환경맵6</div>
-                  <div class="meta">10명 입장 가능</div>
-                  <div class="card-actions">
-                    <a class="btn primary" href="https://zep.us/play/6PBLZz" target="_blank">입장하기</a>
-                    <button class="btn copy" data-copy="https://zep.us/play/6PBLZz">복사</button>
-                    <button class="btn qr" data-qr-title="초등 환경맵 2반-3" data-qr-url="https://zep.us/play/6PBLZz">QR</button>
-                  </div>
+              </div>
+              <div class="zep-card">
+                <span class="type-badge type-zep-escape">ZEP</span>
+                <div class="resource-title">초급 방탈출 04</div>
+                <div class="meta">zep.us/play/r7EgAm</div>
+                <div class="card-actions">
+                  <a class="btn primary" href="https://zep.us/play/r7EgAm" target="_blank">입장하기</a>
+                  <button class="btn copy" data-copy="https://zep.us/play/r7EgAm">복사</button>
+                  <button class="btn qr" data-qr-title="초급 방탈출 04" data-qr-url="https://zep.us/play/r7EgAm">QR</button>
                 </div>
               </div>
             </div>
           </div>
-        </article>
 
-        <article class="program-box searchable" data-type="zep" data-keywords="zep 방탈출 초등 교실맵 10명">
-          <button class="accordion-btn" type="button">
-            <div class="accordion-left">
-              <h3>초등 교실맵</h3>
-              <p>10명용 3개반으로 나누어 관리합니다.</p>
-            </div>
-            <div class="accordion-right">
-              <div class="count-badge">3반</div>
-              <div class="accordion-icon">⌄</div>
-            </div>
-          </button>
-
-          <div class="accordion-panel">
-            <div class="zep-subtabs">
-              <button class="btn subtab active" data-zep-target="class-10-a">10명용 1반</button>
-              <button class="btn subtab" data-zep-target="class-10-b">10명용 2반</button>
-              <button class="btn subtab" data-zep-target="class-10-c">10명용 3반</button>
-            </div>
-
-            <div class="zep-panel active" id="class-10-a">
-              <div class="zep-card-grid zep-grid-3">
-                <div class="zep-card">
-                  <span class="type-badge type-zep">ZEP</span>
-                  <div class="resource-title">초등 방탈출1</div>
-                  <div class="meta">10명 입장 가능</div>
-                  <div class="card-actions">
-                    <a class="btn primary" href="https://zep.us/play/kPWnoZ" target="_blank">입장하기</a>
-                    <button class="btn copy" data-copy="https://zep.us/play/kPWnoZ">복사</button>
-                    <button class="btn qr" data-qr-title="초등 방탈출1" data-qr-url="https://zep.us/play/kPWnoZ">QR</button>
-                  </div>
-                </div>
-                <div class="zep-card">
-                  <span class="type-badge type-zep">ZEP</span>
-                  <div class="resource-title">초등 방탈출2</div>
-                  <div class="meta">10명 입장 가능</div>
-                  <div class="card-actions">
-                    <a class="btn primary" href="https://zep.us/play/dJWgGL" target="_blank">입장하기</a>
-                    <button class="btn copy" data-copy="https://zep.us/play/dJWgGL">복사</button>
-                    <button class="btn qr" data-qr-title="초등 방탈출2" data-qr-url="https://zep.us/play/dJWgGL">QR</button>
-                  </div>
-                </div>
-                <div class="zep-card">
-                  <span class="type-badge type-zep">ZEP</span>
-                  <div class="resource-title">초등 방탈출3</div>
-                  <div class="meta">10명 입장 가능</div>
-                  <div class="card-actions">
-                    <a class="btn primary" href="https://zep.us/play/47avgY" target="_blank">입장하기</a>
-                    <button class="btn copy" data-copy="https://zep.us/play/47avgY">복사</button>
-                    <button class="btn qr" data-qr-title="초등 방탈출3" data-qr-url="https://zep.us/play/47avgY">QR</button>
-                  </div>
+          <div class="accordion-panel" style="padding-top: 20px;"> <div class="zep-card-grid zep-grid-4">
+              <div class="zep-card">
+                <span class="type-badge type-zep-advanced">ZEP</span>
+                <div class="resource-title">환경맵 01</div>
+                <div class="meta">zep.us/play/od9qlB</div>
+                <div class="card-actions">
+                  <a class="btn primary" href="https://zep.us/play/od9qlB" target="_blank">입장하기</a>
+                  <button class="btn copy" data-copy="https://zep.us/play/od9qlB">복사</button>
+                  <button class="btn qr" data-qr-title="환경맵 01" data-qr-url="https://zep.us/play/od9qlB1">QR</button>
                 </div>
               </div>
-            </div>
-
-            <div class="zep-panel" id="class-10-b">
-              <div class="zep-card-grid zep-grid-3">
-                <div class="zep-card">
-                  <span class="type-badge type-zep">ZEP</span>
-                  <div class="resource-title">초등 방탈출4</div>
-                  <div class="meta">10명 입장 가능</div>
-                  <div class="card-actions">
-                    <a class="btn primary" href="https://zep.us/play/EgBLLO" target="_blank">입장하기</a>
-                    <button class="btn copy" data-copy="https://zep.us/play/EgBLLO">복사</button>
-                    <button class="btn qr" data-qr-title="초등 방탈출4" data-qr-url="https://zep.us/play/EgBLLO">QR</button>
-                  </div>
-                </div>
-                <div class="zep-card">
-                  <span class="type-badge type-zep">ZEP</span>
-                  <div class="resource-title">초등 방탈출5</div>
-                  <div class="meta">10명 입장 가능</div>
-                  <div class="card-actions">
-                    <a class="btn primary" href="https://zep.us/play/gGgllN" target="_blank">입장하기</a>
-                    <button class="btn copy" data-copy="https://zep.us/play/gGgllN">복사</button>
-                    <button class="btn qr" data-qr-title="초등 방탈출5" data-qr-url="https://zep.us/play/gGgllN">QR</button>
-                  </div>
-                </div>
-                <div class="zep-card">
-                  <span class="type-badge type-zep">ZEP</span>
-                  <div class="resource-title">초등 방탈출6</div>
-                  <div class="meta">10명 입장 가능</div>
-                  <div class="card-actions">
-                    <a class="btn primary" href="https://zep.us/play/PwazdQ" target="_blank">입장하기</a>
-                    <button class="btn copy" data-copy="https://zep.us/play/PwazdQ">복사</button>
-                    <button class="btn qr" data-qr-title="초등 방탈출6" data-qr-url="https://zep.us/play/PwazdQ">QR</button>
-                  </div>
+              <div class="zep-card">
+                <span class="type-badge type-zep-advanced">ZEP</span>
+                <div class="resource-title">환경맵 02</div>
+                <div class="meta">zep.us/play/wzxKQe</div>
+                <div class="card-actions">
+                  <a class="btn primary" href="https://zep.us/play/wzxKQe" target="_blank">입장하기</a>
+                  <button class="btn copy" data-copy="https://zep.us/play/wzxKQe">복사</button>
+                  <button class="btn qr" data-qr-title="환경맵 02" data-qr-url="https://zep.us/play/wzxKQe">QR</button>
                 </div>
               </div>
-            </div>
-
-            <div class="zep-panel" id="class-10-c">
-              <div class="zep-card-grid zep-grid-3">
-                <div class="zep-card">
-                  <span class="type-badge type-zep">ZEP</span>
-                  <div class="resource-title">초등 방탈출7</div>
-                  <div class="meta">10명 입장 가능</div>
-                  <div class="card-actions">
-                    <a class="btn primary" href="https://zep.us/play/Pwazbn" target="_blank">입장하기</a>
-                    <button class="btn copy" data-copy="https://zep.us/play/Pwazbn">복사</button>
-                    <button class="btn qr" data-qr-title="초등 방탈출7" data-qr-url="https://zep.us/play/Pwazbn">QR</button>
-                  </div>
+              <div class="zep-card">
+                <span class="type-badge type-zep-advanced">ZEP</span>
+                <div class="resource-title">환경맵 03</div>
+                <div class="meta">zep.us/play/mkMqzA</div>
+                <div class="card-actions">
+                  <a class="btn primary" href="https://zep.us/play/mkMqzA" target="_blank">입장하기</a>
+                  <button class="btn copy" data-copy="https://zep.us/play/mkMqzA">복사</button>
+                  <button class="btn qr" data-qr-title="환경맵 03" data-qr-url="https://zep.us/play/mkMqzA">QR</button>
                 </div>
-                <div class="zep-card">
-                  <span class="type-badge type-zep">ZEP</span>
-                  <div class="resource-title">초등 방탈출8</div>
-                  <div class="meta">10명 입장 가능</div>
-                  <div class="card-actions">
-                    <a class="btn primary" href="https://zep.us/play/XWBk3X" target="_blank">입장하기</a>
-                    <button class="btn copy" data-copy="https://zep.us/play/XWBk3X">복사</button>
-                    <button class="btn qr" data-qr-title="초등 방탈출8" data-qr-url="https://zep.us/play/XWBk3X">QR</button>
-                  </div>
-                </div>
-                <div class="zep-card">
-                  <span class="type-badge type-zep">ZEP</span>
-                  <div class="resource-title">초등 방탈출9</div>
-                  <div class="meta">10명 입장 가능</div>
-                  <div class="card-actions">
-                    <a class="btn primary" href="https://zep.us/play/9P6vAa" target="_blank">입장하기</a>
-                    <button class="btn copy" data-copy="https://zep.us/play/9P6vAa">복사</button>
-                    <button class="btn qr" data-qr-title="초등 방탈출9" data-qr-url="https://zep.us/play/9P6vAa">QR</button>
-                  </div>
+              </div>
+              <div class="zep-card">
+                <span class="type-badge type-zep-advanced">ZEP</span>
+                <div class="resource-title">환경맵 04</div>
+                <div class="meta">zep.us/play/N3lAQ9</div>
+                <div class="card-actions">
+                  <a class="btn primary" href="https://zep.us/play/N3lAQ9" target="_blank">입장하기</a>
+                  <button class="btn copy" data-copy="https://zep.us/play/N3lAQ9">복사</button>
+                  <button class="btn qr" data-qr-title="환경맵 04" data-qr-url="https://zep.us/play/N3lAQ9">QR</button>
                 </div>
               </div>
             </div>
           </div>
+
         </article>
 
-        <article class="program-box searchable" data-type="zep" data-keywords="zep 중급 방탈출 10명">
+
+        <article class="program-box searchable" data-type="zep" data-keywords="메타버스 zep 미니운동회 중고등 기본 중급 방탈출 초급 10명" data-password="1234">
           <button class="accordion-btn" type="button">
             <div class="accordion-left">
-              <h3>중급 방탈출</h3>
-              <p>10명용 3개반으로 나누어 관리합니다.</p>
+              <h3>🐥 메타버스 중고등</h3>
+              <p>QR 1개당 10명 입장 가능 [중급 방탈출: 2인 1조]</p>
             </div>
             <div class="accordion-right">
-              <div class="count-badge">3반</div>
+              <div class="count-badge">4개</div>
               <div class="accordion-icon">⌄</div>
             </div>
           </button>
 
-          <div class="accordion-panel">
-            <div class="zep-subtabs">
-              <button class="btn subtab active" data-zep-target="mid-10-a">10명용 1반</button>
-              <button class="btn subtab" data-zep-target="mid-10-b">10명용 2반</button>
-              <button class="btn subtab" data-zep-target="mid-10-c">10명용 3반</button>
-            </div>
 
-            <div class="zep-panel active" id="mid-10-a">
-              <div class="zep-card-grid zep-grid-3">
-                <div class="zep-card">
-                  <span class="type-badge type-zep">ZEP</span>
-                  <div class="resource-title">방탈출 중급1</div>
-                  <div class="meta">10명 입장 가능</div>
-                  <div class="card-actions">
-                    <a class="btn primary" href="https://zep.us/play/M049A5" target="_blank">입장하기</a>
-                    <button class="btn copy" data-copy="https://zep.us/play/M049A5">복사</button>
-                    <button class="btn qr" data-qr-title="중급 방탈출 1반-1" data-qr-url="https://zep.us/play/M049A5">QR</button>
-                  </div>
+          <div class="accordion-panel" style="padding-top: 20px;"> <div class="zep-card-grid zep-grid-4">
+              <div class="zep-card">
+                <span class="type-badge type-zep-sports">ZEP</span>
+                <div class="resource-title">미니운동회 01</div>
+                <div class="meta">zep.us/play/VqwQPo</div>
+                <div class="card-actions">
+                  <a class="btn primary" href="https://zep.us/play/VqwQPo" target="_blank">입장하기</a>
+                  <button class="btn copy" data-copy="https://zep.us/play/VqwQPo">복사</button>
+                  <button class="btn qr" data-qr-title="미니운동회 01" data-qr-url="https://zep.us/play/VqwQPo">QR</button>
                 </div>
-                <div class="zep-card">
-                  <span class="type-badge type-zep">ZEP</span>
-                  <div class="resource-title">방탈출 중급2</div>
-                  <div class="meta">10명 입장 가능</div>
-                  <div class="card-actions">
-                    <a class="btn primary" href="https://zep.us/play/R55BxR" target="_blank">입장하기</a>
-                    <button class="btn copy" data-copy="https://zep.us/play/R55BxR">복사</button>
-                    <button class="btn qr" data-qr-title="중급 방탈출 1반-2" data-qr-url="https://zep.us/play/R55BxR">QR</button>
-                  </div>
+              </div>
+              <div class="zep-card">
+                <span class="type-badge type-zep-sports">ZEP</span>
+                <div class="resource-title">미니운동회 02</div>
+                <div class="meta">zep.us/play/47k01K</div>
+                <div class="card-actions">
+                  <a class="btn primary" href="https://zep.us/play/47k01K" target="_blank">입장하기</a>
+                  <button class="btn copy" data-copy="https://zep.us/play/47k01K">복사</button>
+                  <button class="btn qr" data-qr-title="미니운동회 02" data-qr-url="https://zep.us/play/47k01K">QR</button>
                 </div>
-                <div class="zep-card">
-                  <span class="type-badge type-zep">ZEP</span>
-                  <div class="resource-title">방탈출 중급3</div>
-                  <div class="meta">10명 입장 가능</div>
-                  <div class="card-actions">
-                    <a class="btn primary" href="https://zep.us/play/lppaEd" target="_blank">입장하기</a>
-                    <button class="btn copy" data-copy="https://zep.us/play/lppaEd">복사</button>
-                    <button class="btn qr" data-qr-title="중급 방탈출 1반-3" data-qr-url="https://zep.us/play/lppaEd">QR</button>
-                  </div>
+              </div>
+              <div class="zep-card">
+                <span class="type-badge type-zep-sports">ZEP</span>
+                <div class="resource-title">미니운동회 03</div>
+                <div class="meta">zep.us/play/0Ed06A</div>
+                <div class="card-actions">
+                  <a class="btn primary" href="https://zep.us/play/0Ed06A" target="_blank">입장하기</a>
+                  <button class="btn copy" data-copy="https://zep.us/play/0Ed06A">복사</button>
+                  <button class="btn qr" data-qr-title="미니운동회 03" data-qr-url="https://zep.us/play/0Ed06A">QR</button>
+                </div>
+              </div>
+              <div class="zep-card">
+                <span class="type-badge type-zep-sports">ZEP</span>
+                <div class="resource-title">미니운동회 04</div>
+                <div class="meta">zep.us/play/5rk7dB</div>
+                <div class="card-actions">
+                  <a class="btn primary" href="https://zep.us/play/5rk7dB" target="_blank">입장하기</a>
+                  <button class="btn copy" data-copy="https://zep.us/play/5rk7dB">복사</button>
+                  <button class="btn qr" data-qr-title="미니운동회 04" data-qr-url="https://zep.us/play/5rk7dB">QR</button>
                 </div>
               </div>
             </div>
+          </div>
 
-            <div class="zep-panel" id="mid-10-b">
-              <div class="zep-card-grid zep-grid-3">
-                <div class="zep-card">
-                  <span class="type-badge type-zep">ZEP</span>
-                  <div class="resource-title">방탈출 중급4</div>
-                  <div class="meta">10명 입장 가능</div>
-                  <div class="card-actions">
-                    <a class="btn primary" href="https://zep.us/play/EggGVm" target="_blank">입장하기</a>
-                    <button class="btn copy" data-copy="https://zep.us/play/EggGVm">복사</button>
-                    <button class="btn qr" data-qr-title="중급 방탈출 2반-1" data-qr-url="https://zep.us/play/EggGVm">QR</button>
-                  </div>
+            <div class="accordion-panel" style="padding-top: 20px;"> <div class="zep-card-grid zep-grid-4">
+              <div class="zep-card">
+                <span class="type-badge type-zep-basic">ZEP</span>
+                <div class="resource-title">기본 방탈출 01</div>
+                <div class="meta">zep.us/play/GpGqdz</div>
+                <div class="card-actions">
+                  <a class="btn primary" href="https://zep.us/play/GpGqdz" target="_blank">입장하기</a>
+                  <button class="btn copy" data-copy="https://zep.us/play/GpGqdz">복사</button>
+                  <button class="btn qr" data-qr-title="기본 방탈출 01" data-qr-url="https://zep.us/play/GpGqdz">QR</button>
                 </div>
-                <div class="zep-card">
-                  <span class="type-badge type-zep">ZEP</span>
-                  <div class="resource-title">방탈출 중급5</div>
-                  <div class="meta">10명 입장 가능</div>
-                  <div class="card-actions">
-                    <a class="btn primary" href="https://zep.us/play/r775PM" target="_blank">입장하기</a>
-                    <button class="btn copy" data-copy="https://zep.us/play/r775PM">복사</button>
-                    <button class="btn qr" data-qr-title="중급 방탈출 2반-2" data-qr-url="https://zep.us/play/r775PM">QR</button>
-                  </div>
+              </div>
+              <div class="zep-card">
+                <span class="type-badge type-zep-basic">ZEP</span>
+                <div class="resource-title">기본 방탈출 02</div>
+                <div class="meta">zep.us/play/JdmZ6b</div>
+                <div class="card-actions">
+                  <a class="btn primary" href="https://zep.us/play/JdmZ6b" target="_blank">입장하기</a>
+                  <button class="btn copy" data-copy="https://zep.us/play/JdmZ6b">복사</button>
+                  <button class="btn qr" data-qr-title="기본 방탈출 02" data-qr-url="https://zep.us/play/JdmZ6b">QR</button>
                 </div>
-                <div class="zep-card">
-                  <span class="type-badge type-zep">ZEP</span>
-                  <div class="resource-title">방탈출 중급6</div>
-                  <div class="meta">10명 입장 가능</div>
-                  <div class="card-actions">
-                    <a class="btn primary" href="https://zep.us/play/AOOBa6" target="_blank">입장하기</a>
-                    <button class="btn copy" data-copy="https://zep.us/play/AOOBa6">복사</button>
-                    <button class="btn qr" data-qr-title="중급 방탈출 2반-3" data-qr-url="https://zep.us/play/AOOBa6">QR</button>
-                  </div>
+              </div>
+              <div class="zep-card">
+                <span class="type-badge type-zep-basic">ZEP</span>
+                <div class="resource-title">기본 방탈출 03</div>
+                <div class="meta">zep.us/play/dJ4GnL</div>
+                <div class="card-actions">
+                  <a class="btn primary" href="https://zep.us/play/dJ4GnL" target="_blank">입장하기</a>
+                  <button class="btn copy" data-copy="https://zep.us/play/dJ4GnL">복사</button>
+                  <button class="btn qr" data-qr-title="기본 방탈출 03" data-qr-url="https://zep.us/play/dJ4GnL">QR</button>
+                </div>
+              </div>
+              <div class="zep-card">
+                <span class="type-badge type-zep-basic">ZEP</span>
+                <div class="resource-title">기본 방탈출 04</div>
+                <div class="meta">zep.us/play/Z9wMgg</div>
+                <div class="card-actions">
+                  <a class="btn primary" href="https://zep.us/play/Z9wMgg" target="_blank">입장하기</a>
+                  <button class="btn copy" data-copy="https://zep.us/play/Z9wMgg">복사</button>
+                  <button class="btn qr" data-qr-title="기본 방탈출 04" data-qr-url="https://zep.us/play/Z9wMgg">QR</button>
                 </div>
               </div>
             </div>
+          </div>
 
-            <div class="zep-panel" id="mid-10-c">
-              <div class="zep-card-grid zep-grid-3">
-                <div class="zep-card">
-                  <span class="type-badge type-zep">ZEP</span>
-                  <div class="resource-title">방탈출 중급7</div>
-                  <div class="meta">10명 입장 가능</div>
-                  <div class="card-actions">
-                    <a class="btn primary" href="https://zep.us/play/lppkYg" target="_blank">입장하기</a>
-                    <button class="btn copy" data-copy="https://zep.us/play/lppkYg">복사</button>
-                    <button class="btn qr" data-qr-title="중급 방탈출 3반-1" data-qr-url="https://zep.us/play/lppkYg">QR</button>
-                  </div>
-                </div>
-                <div class="zep-card">
-                  <span class="type-badge type-zep">ZEP</span>
-                  <div class="resource-title">방탈출 중급8</div>
-                  <div class="meta">10명 입장 가능</div>
-                  <div class="card-actions">
-                    <a class="btn primary" href="https://zep.us/play/gGGdR9" target="_blank">입장하기</a>
-                    <button class="btn copy" data-copy="https://zep.us/play/gGGdR9">복사</button>
-                    <button class="btn qr" data-qr-title="중급 방탈출 3반-2" data-qr-url="https://zep.us/play/gGGdR9">QR</button>
-                  </div>
-                </div>
-                <div class="zep-card">
-                  <span class="type-badge type-zep">ZEP</span>
-                  <div class="resource-title">방탈출 중급9</div>
-                  <div class="meta">10명 입장 가능</div>
-                  <div class="card-actions">
-                    <a class="btn primary" href="https://zep.us/play/Egg5WG" target="_blank">입장하기</a>
-                    <button class="btn copy" data-copy="https://zep.us/play/Egg5WG">복사</button>
-                    <button class="btn qr" data-qr-title="중급 방탈출 3반-3" data-qr-url="https://zep.us/play/Egg5WG">QR</button>
-                  </div>
+          <div class="accordion-panel" style="padding-top: 20px;"> <div class="zep-card-grid zep-grid-4">
+              <div class="zep-card">
+                <span class="type-badge type-zep-escape">ZEP</span>
+                <div class="resource-title">중급 방탈출 01</div>
+                <div class="meta">zep.us/play/zZZowB</div>
+                <div class="card-actions">
+                  <a class="btn primary" href="https://zep.us/play/zZZowB" target="_blank">입장하기</a>
+                  <button class="btn copy" data-copy="https://zep.us/play/zZZowB">복사</button>
+                  <button class="btn qr" data-qr-title="중급 방탈출 01" data-qr-url="https://zep.us/play/zZZowB">QR</button>
                 </div>
               </div>
+              <div class="zep-card">
+                <span class="type-badge type-zep-escape">ZEP</span>
+                <div class="resource-title">중급 방탈출 02</div>
+                <div class="meta">zep.us/play/lpL7BK</div>
+                <div class="card-actions">
+                  <a class="btn primary" href="https://zep.us/play/lpL7BK" target="_blank">입장하기</a>
+                  <button class="btn copy" data-copy="https://zep.us/play/lpL7BK">복사</button>
+                  <button class="btn qr" data-qr-title="중급 방탈출 02" data-qr-url="https://zep.us/play/lpL7BK">QR</button>
+                </div>
+              </div>
+              <div class="zep-card">
+                <span class="type-badge type-zep-escape">ZEP</span>
+                <div class="resource-title">중급 방탈출 03</div>
+                <div class="meta">zep.us/play/6Pk0nx</div>
+                <div class="card-actions">
+                  <a class="btn primary" href="https://zep.us/play/6Pk0nx" target="_blank">입장하기</a>
+                  <button class="btn copy" data-copy="https://zep.us/play/6Pk0nx">복사</button>
+                  <button class="btn qr" data-qr-title="중급 방탈출 03" data-qr-url="https://zep.us/play/6Pk0nx">QR</button>
+                </div>
+              </div>
+              <div class="zep-card">
+                <span class="type-badge type-zep-escape">ZEP</span>
+                <div class="resource-title">중급 방탈출 04</div>
+                <div class="meta">zep.us/play/AOl3ZW</div>
+                <div class="card-actions">
+                  <a class="btn primary" href="https://zep.us/play/AOl3ZW" target="_blank">입장하기</a>
+                  <button class="btn copy" data-copy="https://zep.us/play/AOl3ZW">복사</button>
+                  <button class="btn qr" data-qr-title="중급 방탈출 04" data-qr-url="https://zep.us/play/AOl3ZW">QR</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </article>
+
+
+        <article class="program-box searchable" data-type="zep" data-keywords="메타버스 zep 미니운동회 중고등 기본 중급 방탈출 초급 10명" data-password="1234">
+          <button class="accordion-btn" type="button">
+            <div class="accordion-left">
+              <h3>🏢 메타버스 기업용</h3>
+              <p>교육 상황별 맞춤 활용 [중급 방탈출: 2인 1조]</p>
+            </div>
+            <div class="accordion-right">
+              <div class="count-badge">3개</div>
+              <div class="accordion-icon">⌄</div>
+            </div>
+          </button>
+
+
+          <div class="accordion-panel" style="padding-top: 20px;"> <div class="zep-card-grid zep-grid-3">
+              <div class="zep-card">
+                <span class="type-badge type-zep-sports">ZEP</span>
+                <div class="resource-title">미니운동회1_30명</div>
+                <div class="meta">zep.us/play/2eVdlK</div>
+                <div class="card-actions">
+                  <a class="btn primary" href="https://zep.us/play/2eVdlK" target="_blank">입장하기</a>
+                  <button class="btn copy" data-copy="https://zep.us/play/2eVdlK">복사</button>
+                  <button class="btn qr" data-qr-title="미니운동회1_30명" data-qr-url="https://zep.us/play/2eVdlK">QR</button>
+                </div>
+              </div>
+              <div class="zep-card">
+                <span class="type-badge type-zep-sports">ZEP</span>
+                <div class="resource-title">미니운동회2_30명</div>
+                <div class="meta">zep.us/play/8Lp0nM</div>
+                <div class="card-actions">
+                  <a class="btn primary" href="https://zep.us/play/8Lp0nM" target="_blank">입장하기</a>
+                  <button class="btn copy" data-copy="https://zep.us/play/8Lp0nM">복사</button>
+                  <button class="btn qr" data-qr-title="미니운동회2_30명" data-qr-url="https://zep.us/play/8Lp0nM">QR</button>
+                </div>
+              </div>
+              <div class="zep-card">
+                <span class="type-badge type-zep-sports">ZEP</span>
+                <div class="resource-title">미니운동회3_20명</div>
+                <div class="meta">zep.us/play/dJB6q5</div>
+                <div class="card-actions">
+                  <a class="btn primary" href="https://zep.us/play/dJB6q5" target="_blank">입장하기</a>
+                  <button class="btn copy" data-copy="https://zep.us/play/dJB6q5">복사</button>
+                  <button class="btn qr" data-qr-title="미니운동회3_20명" data-qr-url="https://zep.us/play/dJB6q5">QR</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+            <div class="accordion-panel" style="padding-top: 20px;"> <div class="zep-card-grid zep-grid-3">
+              <div class="zep-card">
+                <span class="type-badge type-zep-basic">ZEP</span>
+                <div class="resource-title">기본 방탈출1_30명</div>
+                <div class="meta">zep.us/play/87xmZ7</div>
+                <div class="card-actions">
+                  <a class="btn primary" href="https://zep.us/play/87xmZ7" target="_blank">입장하기</a>
+                  <button class="btn copy" data-copy="https://zep.us/play/87xmZ7">복사</button>
+                  <button class="btn qr" data-qr-title="기본 방탈출1_30명" data-qr-url="https://zep.us/play/87xmZ7">QR</button>
+                </div>
+              </div>
+              <div class="zep-card">
+                <span class="type-badge type-zep-basic">ZEP</span>
+                <div class="resource-title">기본 방탈출2_30명</div>
+                <div class="meta">zep.us/play/8AA0mW</div>
+                <div class="card-actions">
+                  <a class="btn primary" href="https://zep.us/play/8AA0mW" target="_blank">입장하기</a>
+                  <button class="btn copy" data-copy="https://zep.us/play/8AA0mW">복사</button>
+                  <button class="btn qr" data-qr-title="기본 방탈출 02" data-qr-url="https://zep.us/play/8AA0mW">QR</button>
+                </div>
+              </div>
+              <div class="zep-card">
+                <span class="type-badge type-zep-basic">ZEP</span>
+                <div class="resource-title">기본 방탈출3_20명</div>
+                <div class="meta">zep.us/play/1GlBYo</div>
+                <div class="card-actions">
+                  <a class="btn primary" href="https://zep.us/play/1GlBYo" target="_blank">입장하기</a>
+                  <button class="btn copy" data-copy="https://zep.us/play/1GlBYo">복사</button>
+                  <button class="btn qr" data-qr-title="기본 방탈출3_20명" data-qr-url="https://zep.us/play/1GlBYo">QR</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-panel" style="padding-top: 20px;"> <div class="zep-card-grid zep-grid-3">
+              <div class="zep-card">
+                <span class="type-badge type-zep-escape">ZEP</span>
+                <div class="resource-title">중급 방탈출1_10명</div>
+                <div class="meta">zep.us/play/M049A5</div>
+                <div class="card-actions">
+                  <a class="btn primary" href="https://zep.us/play/M049A5" target="_blank">입장하기</a>
+                  <button class="btn copy" data-copy="https://zep.us/play/M049A5">복사</button>
+                  <button class="btn qr" data-qr-title="중급 방탈출1_10명" data-qr-url="https://zep.us/play/M049A5">QR</button>
+                </div>
+              </div>
+              <div class="zep-card">
+                <span class="type-badge type-zep-escape">ZEP</span>
+                <div class="resource-title">중급 방탈출2_10명</div>
+                <div class="meta">zep.us/play/R55BxR</div>
+                <div class="card-actions">
+                  <a class="btn primary" href="https://zep.us/play/R55BxR" target="_blank">입장하기</a>
+                  <button class="btn copy" data-copy="https://zep.us/play/R55BxR">복사</button>
+                  <button class="btn qr" data-qr-title="중급 방탈출2_10명" data-qr-url="https://zep.us/play/R55BxR">QR</button>
+                </div>
+              </div>
+              <div class="zep-card">
+                <span class="type-badge type-zep-escape">ZEP</span>
+                <div class="resource-title">중급 방탈출3_10명</div>
+                <div class="meta">zep.us/play/lppaEd</div>
+                <div class="card-actions">
+                  <a class="btn primary" href="https://zep.us/play/lppaEd" target="_blank">입장하기</a>
+                  <button class="btn copy" data-copy="https://zep.us/play/lppaEd">복사</button>
+                  <button class="btn qr" data-qr-title="중급 방탈출3_10명" data-qr-url="https://zep.us/play/lppaEd">QR</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-panel" style="padding-top: 20px;"> <div class="zep-card-grid zep-grid-3">
+              <div class="zep-card">
+                <span class="type-badge type-zep-advanced">ZEP</span>
+                <div class="resource-title">아이스 브레이킹용1_00명</div>
+                <div class="meta">zep.us/play/</div>
+                <div class="card-actions">
+                  <a class="btn primary" href="https://zep.us/play/" target="_blank">입장하기</a>
+                  <button class="btn copy" data-copy="https://zep.us/play/">복사</button>
+                  <button class="btn qr" data-qr-title="아이스 브레이킹용1" data-qr-url="https://zep.us/play/">QR</button>
+                </div>
+              </div>
+              <div class="zep-card">
+                <span class="type-badge type-zep-advanced">ZEP</span>
+                <div class="resource-title">아이스 브레이킹용2_00명</div>
+                <div class="meta">zep.us/play/</div>
+                <div class="card-actions">
+                  <a class="btn primary" href="https://zep.us/play/" target="_blank">입장하기</a>
+                  <button class="btn copy" data-copy="https://zep.us/play/">복사</button>
+                  <button class="btn qr" data-qr-title="아이스 브레이킹용2" data-qr-url="https://zep.us/play/">QR</button>
+                </div>
+              </div>
+              <div class="zep-card">
+                <span class="type-badge type-zep-advanced">ZEP</span>
+                <div class="resource-title">아이스 브레이킹용3_00명</div>
+                <div class="meta">zep.us/play/</div>
+                <div class="card-actions">
+                  <a class="btn primary" href="https://zep.us/play/" target="_blank">입장하기</a>
+                  <button class="btn copy" data-copy="https://zep.us/play/">복사</button>
+                  <button class="btn qr" data-qr-title="아이스 브레이킹용3" data-qr-url="https://zep.us/play/">QR</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </article>
+
+
+        <article class="program-box searchable" data-type="zep" data-keywords="zep 복습 신소재 10명" data-password="1234">
+          <button class="accordion-btn" type="button">
+            <div class="accordion-left">
+              <h3>💎신소재</h3>
+              <p>QR 1개당 10명 입장 가능 [개별 입장]</p>
+            </div>
+            <div class="accordion-right">
+              <div class="count-badge">4개</div>
+              <div class="accordion-icon">⌄</div>
+            </div>
+          </button>
+
+
+          <div class="accordion-panel"><div class="zep-card-grid zep-grid-4">
+              
+              <div class="zep-card">
+                <span class="type-badge type-zep-sports">ZEP</span>
+                <div class="resource-title">신소재 복습 01</div>
+                <div class="meta">zep.us/play/r7JGja</div>
+                <div class="card-actions">
+                  <a class="btn primary" href="https://zep.us/play/r7JGja" target="_blank">입장하기</a>
+                  <button class="btn copy" data-copy="https://zep.us/play/r7JGja">복사</button>
+                  <button class="btn qr" data-qr-title="신소재 복습 01" data-qr-url="https://zep.us/play/r7JGja">QR</button>
+                </div>
+              </div>
+
+              <div class="zep-card">
+                <span class="type-badge type-zep-sports">ZEP</span>
+                <div class="resource-title">신소재 복습 02</div>
+                <div class="meta">zep.us/play/EgaZ0p</div>
+                <div class="card-actions">
+                  <a class="btn primary" href="https://zep.us/play/EgaZ0p" target="_blank">입장하기</a>
+                  <button class="btn copy" data-copy="https://zep.us/play/EgaZ0p">복사</button>
+                  <button class="btn qr" data-qr-title="신소재 복습 02" data-qr-url="https://zep.us/play/EgaZ0p">QR</button>
+                </div>
+              </div>
+
+              <div class="zep-card">
+                <span class="type-badge type-zep-sports">ZEP</span>
+                <div class="resource-title">신소재 복습 03</div>
+                <div class="meta">zep.us/play/r7JGq5</div>
+                <div class="card-actions">
+                  <a class="btn primary" href="https://zep.us/play/r7JGq5" target="_blank">입장하기</a>
+                  <button class="btn copy" data-copy="https://zep.us/play/r7JGq5">복사</button>
+                  <button class="btn qr" data-qr-title="신소재 복습 03" data-qr-url="https://zep.us/play/r7JGq5">QR</button>
+                </div>
+              </div>
+
+              <div class="zep-card">
+                <span class="type-badge type-zep-sports">ZEP</span>
+                <div class="resource-title">신소재 복습 04</div>
+                <div class="meta">zep.us/play/GpbVv7</div>
+                <div class="card-actions">
+                  <a class="btn primary" href="https://zep.us/play/GpbVv7" target="_blank">입장하기</a>
+                  <button class="btn copy" data-copy="https://zep.us/play/GpbVv7">복사</button>
+                  <button class="btn qr" data-qr-title="신소재 복습 04" data-qr-url="https://zep.us/play/GpbVv7">QR</button>
+                </div>
+              </div>
+
             </div>
           </div>
         </article>
@@ -2644,12 +2559,12 @@
         <article class="program-box searchable" data-type="zep" data-keywords="zep 복습 반도체 10명" data-password="1234">
           <button class="accordion-btn" type="button">
             <div class="accordion-left">
-              <h3>반도체 맵</h3>
-              <p>10명 3개 QR로 나누어 관리합니다.</p>
+              <h3>⚡반도체</h3>
+              <p>QR 1개당 10명 입장 가능 [개별 입장]</p>
               <!-- <p>잠금 설정된 과목입니다. 비밀번호 입력 후 자료를 확인할 수 있습니다.</p> -->
             </div>
             <div class="accordion-right">
-              <div class="count-badge">1반</div>
+              <div class="count-badge">4개</div>
               <div class="accordion-icon">⌄</div>
             </div>
           </button>
@@ -2672,39 +2587,49 @@
             </div>
           </div> -->
 
-          <div class="accordion-panel">
-            <div class="zep-card-grid zep-grid-4">
+          <div class="accordion-panel"><div class="zep-card-grid zep-grid-4">
               
               <div class="zep-card">
-                <span class="type-badge type-zep">ZEP</span>
-                <div class="resource-title">반도체 복습1</div>
-                <div class="meta">10명 입장 가능</div>
+                <span class="type-badge type-zep-sports">ZEP</span>
+                <div class="resource-title">반도체 복습 01</div>
+                <div class="meta">zep.us/play/GpbV7M</div>
                 <div class="card-actions">
-                  <a class="btn primary" href="https://zep.us/play/OvPdJM" target="_blank">입장하기</a>
-                  <button class="btn copy" data-copy="https://zep.us/play/OvPdJM">복사</button>
-                  <button class="btn qr" data-qr-title="반도체 1반 링크 1" data-qr-url="https://zep.us/play/OvPdJM">QR</button>
+                  <a class="btn primary" href="https://zep.us/play/GpbV7M" target="_blank">입장하기</a>
+                  <button class="btn copy" data-copy="https://zep.us/play/GpbV7M">복사</button>
+                  <button class="btn qr" data-qr-title="반도체 복습 01" data-qr-url="https://zep.us/play/GpbV7M">QR</button>
                 </div>
               </div>
 
               <div class="zep-card">
-                <span class="type-badge type-zep">ZEP</span>
-                <div class="resource-title">반도체 복습2</div>
-                <div class="meta">10명 입장 가능</div>
+                <span class="type-badge type-zep-sports">ZEP</span>
+                <div class="resource-title">반도체 복습 02</div>
+                <div class="meta">zep.us/play/lpm3NP</div>
                 <div class="card-actions">
-                  <a class="btn primary" href="https://zep.us/play/AObqG9" target="_blank">입장하기</a>
-                  <button class="btn copy" data-copy="https://zep.us/play/AObqG9">복사</button>
-                  <button class="btn qr" data-qr-title="반도체 1반 링크 2" data-qr-url="https://zep.us/play/AObqG9">QR</button>
+                  <a class="btn primary" href="https://zep.us/play/lpm3NP" target="_blank">입장하기</a>
+                  <button class="btn copy" data-copy="https://zep.us/play/lpm3NP">복사</button>
+                  <button class="btn qr" data-qr-title="반도체 복습 02" data-qr-url="https://zep.us/play/lpm3NP">QR</button>
                 </div>
               </div>
 
               <div class="zep-card">
-                <span class="type-badge type-zep">ZEP</span>
-                <div class="resource-title">반도체 복습3</div>
-                <div class="meta">10명 입장 가능</div>
+                <span class="type-badge type-zep-sports">ZEP</span>
+                <div class="resource-title">반도체 복습 03</div>
+                <div class="meta">zep.us/play/QaRoWj</div>
                 <div class="card-actions">
-                  <a class="btn primary" href="https://zep.us/play/jl7wpQ" target="_blank">입장하기</a>
-                  <button class="btn copy" data-copy="https://zep.us/play/jl7wpQ">복사</button>
-                  <button class="btn qr" data-qr-title="반도체 1반 링크 3" data-qr-url="https://zep.us/play/jl7wpQ">QR</button>
+                  <a class="btn primary" href="https://zep.us/play/QaRoWj" target="_blank">입장하기</a>
+                  <button class="btn copy" data-copy="https://zep.us/play/QaRoWj">복사</button>
+                  <button class="btn qr" data-qr-title="반도체 복습 03" data-qr-url="https://zep.us/play/QaRoWj">QR</button>
+                </div>
+              </div>
+
+              <div class="zep-card">
+                <span class="type-badge type-zep-sports">ZEP</span>
+                <div class="resource-title">반도체 복습 04</div>
+                <div class="meta">zep.us/play/N3mLlo</div>
+                <div class="card-actions">
+                  <a class="btn primary" href="https://zep.us/play/N3mLlo" target="_blank">입장하기</a>
+                  <button class="btn copy" data-copy="https://zep.us/play/N3mLlo">복사</button>
+                  <button class="btn qr" data-qr-title="반도체 복습 04" data-qr-url="https://zep.us/play/N3mLlo">QR</button>
                 </div>
               </div>
 
@@ -2715,11 +2640,11 @@
         <article class="program-box searchable" data-type="zep" data-keywords="zep 제약 연구 10명" data-password="1234">
           <button class="accordion-btn" type="button">
             <div class="accordion-left">
-              <h3>제약 연구 맵</h3>
-              <p>1반당 2개 QR로 나누어 관리합니다. (2인 1조)</p>
+              <h3>💊 제약 연구</h3>
+              <p>QR 1개당 10명 입장 가능 [개별 입장]</p>
             </div>
             <div class="accordion-right">
-              <div class="count-badge">1반</div>
+              <div class="count-badge">4개</div>
               <div class="accordion-icon">⌄</div>
             </div>
           </button>
@@ -2728,46 +2653,46 @@
             <div class="zep-card-grid zep-grid-4">
               
               <div class="zep-card">
-                <span class="type-badge type-zep">ZEP</span>
-                <div class="resource-title">제약 연구1</div>
-                <div class="meta">10명 입장 가능</div>
+                <span class="type-badge type-zep-sports">ZEP</span>
+                <div class="resource-title">제약 연구 01</div>
+                <div class="meta">zep.us/play/pnlAqg</div>
                 <div class="card-actions">
-                  <a class="btn primary" href="https://zep.us/play/XWnLeK" target="_blank">입장하기</a>
-                  <button class="btn copy" data-copy="https://zep.us/play/XWnLeK">복사</button>
-                  <button class="btn qr" data-qr-title="제약 연구 01" data-qr-url="https://zep.us/play/XWnLeK">QR</button>
+                  <a class="btn primary" href="https://zep.us/play/pnlAqg" target="_blank">입장하기</a>
+                  <button class="btn copy" data-copy="https://zep.us/play/pnlAqg">복사</button>
+                  <button class="btn qr" data-qr-title="제약 연구 01" data-qr-url="https://zep.us/play/pnlAqg">QR</button>
                 </div>
               </div>
 
               <div class="zep-card">
-                <span class="type-badge type-zep">ZEP</span>
-                <div class="resource-title">제약 연구2</div>
-                <div class="meta">10명 입장 가능</div>
+                <span class="type-badge type-zep-sports">ZEP</span>
+                <div class="resource-title">제약 연구 02</div>
+                <div class="meta">zep.us/play/bLK5PR</div>
                 <div class="card-actions">
-                  <a class="btn primary" href="https://zep.us/play/M0mJBK" target="_blank">입장하기</a>
-                  <button class="btn copy" data-copy="https://zep.us/play/M0mJBK">복사</button>
-                  <button class="btn qr" data-qr-title="제약 연구 02" data-qr-url="https://zep.us/play/M0mJBK">QR</button>
+                  <a class="btn primary" href="https://zep.us/play/bLK5PR" target="_blank">입장하기</a>
+                  <button class="btn copy" data-copy="https://zep.us/play/bLK5PR">복사</button>
+                  <button class="btn qr" data-qr-title="제약 연구 02" data-qr-url="https://zep.us/play/bLK5PR">QR</button>
                 </div>
               </div>
 
               <div class="zep-card">
-                <span class="type-badge type-zep">ZEP</span>
-                <div class="resource-title">제약 연구3</div>
-                <div class="meta">10명 입장 가능</div>
+                <span class="type-badge type-zep-sports">ZEP</span>
+                <div class="resource-title">제약 연구 03</div>
+                <div class="meta">zep.us/play/OvgGV9</div>
                 <div class="card-actions">
-                  <a class="btn primary" href="https://zep.us/play/zZMQ4J" target="_blank">입장하기</a>
-                  <button class="btn copy" data-copy="https://zep.us/play/zZMQ4J">복사</button>
-                  <button class="btn qr" data-qr-title="제약 연구 03" data-qr-url="https://zep.us/play/zZMQ4J">QR</button>
+                  <a class="btn primary" href="https://zep.us/play/OvgGV9" target="_blank">입장하기</a>
+                  <button class="btn copy" data-copy="https://zep.us/play/OvgGV9">복사</button>
+                  <button class="btn qr" data-qr-title="제약 연구 03" data-qr-url="https://zep.us/play/OvgGV9">QR</button>
                 </div>
               </div>
 
               <div class="zep-card">
-                <span class="type-badge type-zep">ZEP</span>
-                <div class="resource-title">제약 연구4</div>
-                <div class="meta">10명 입장 가능</div>
+                <span class="type-badge type-zep-sports">ZEP</span>
+                <div class="resource-title">제약 연구 04</div>
+                <div class="meta">zep.us/play/R5lmar</div>
                 <div class="card-actions">
-                  <a class="btn primary" href="https://zep.us/play/pnwE75" target="_blank">입장하기</a>
-                  <button class="btn copy" data-copy="https://zep.us/play/pnwE75">복사</button>
-                  <button class="btn qr" data-qr-title="제약 연구 04" data-qr-url="https://zep.us/play/pnwE75">QR</button>
+                  <a class="btn primary" href="https://zep.us/play/R5lmar" target="_blank">입장하기</a>
+                  <button class="btn copy" data-copy="https://zep.us/play/R5lmar">복사</button>
+                  <button class="btn qr" data-qr-title="제약 연구 04" data-qr-url="https://zep.us/play/R5lmar">QR</button>
                 </div>
               </div>
 
@@ -2778,11 +2703,11 @@
         <article class="program-box searchable" data-type="zep" data-keywords="zep 정보보안 10명" data-password="1234">
           <button class="accordion-btn" type="button">
             <div class="accordion-left">
-              <h3>정보보안 맵</h3>
-              <p>1반당 2개 QR로 나누어 관리합니다. (1개 QR당 2개조 입장)</p>
+              <h3>🔒 정보보안</h3>
+              <p>QR 1개당 10명 입장 가능 [개별 입장]</p>
             </div>
             <div class="accordion-right">
-              <div class="count-badge">1반</div>
+              <div class="count-badge">4개</div>
               <div class="accordion-icon">⌄</div>
             </div>
           </button>
@@ -2790,43 +2715,103 @@
 
           <div class="accordion-panel" style="padding-top: 20px;"> <div class="zep-card-grid zep-grid-4">
               <div class="zep-card">
-                <span class="type-badge type-zep">ZEP</span>
-                <div class="resource-title">정보보안1</div>
-                <div class="meta">10명 입장 가능</div>
+                <span class="type-badge type-zep-sports">ZEP</span>
+                <div class="resource-title">정보보안 01</div>
+                <div class="meta">zep.us/play/R5lmaL</div>
                 <div class="card-actions">
-                  <a class="btn primary" href="https://zep.us/play/XWR5EJ" target="_blank">입장하기</a>
-                  <button class="btn copy" data-copy="https://zep.us/play/XWR5EJ">복사</button>
-                  <button class="btn qr" data-qr-title="정보보안 01" data-qr-url="https://zep.us/play/XWR5EJ">QR</button>
+                  <a class="btn primary" href="https://zep.us/play/R5lmaL" target="_blank">입장하기</a>
+                  <button class="btn copy" data-copy="https://zep.us/play/R5lmaL">복사</button>
+                  <button class="btn qr" data-qr-title="정보보안 01" data-qr-url="https://zep.us/play/R5lmaL">QR</button>
                 </div>
               </div>
               <div class="zep-card">
-                <span class="type-badge type-zep">ZEP</span>
-                <div class="resource-title">정보보안2</div>
-                <div class="meta">10명 입장 가능</div>
+                <span class="type-badge type-zep-sports">ZEP</span>
+                <div class="resource-title">정보보안 02</div>
+                <div class="meta">zep.us/play/xEQRjJ</div>
                 <div class="card-actions">
-                  <a class="btn primary" href="https://zep.us/play/R5GK7Z" target="_blank">입장하기</a>
-                  <button class="btn copy" data-copy="https://zep.us/play/R5GK7Z">복사</button>
-                  <button class="btn qr" data-qr-title="정보보안 02" data-qr-url="https://zep.us/play/R5GK7Z">QR</button>
+                  <a class="btn primary" href="https://zep.us/play/xEQRjJ" target="_blank">입장하기</a>
+                  <button class="btn copy" data-copy="https://zep.us/play/xEQRjJ">복사</button>
+                  <button class="btn qr" data-qr-title="정보보안 02" data-qr-url="https://zep.us/play/xEQRjJ">QR</button>
                 </div>
               </div>
               <div class="zep-card">
-                <span class="type-badge type-zep">ZEP</span>
-                <div class="resource-title">정보보안3</div>
-                <div class="meta">10명 입장 가능</div>
+                <span class="type-badge type-zep-sports">ZEP</span>
+                <div class="resource-title">정보보안 03</div>
+                <div class="meta">zep.us/play/BjxNXw</div>
                 <div class="card-actions">
-                  <a class="btn primary" href="https://zep.us/play/YvlKLn" target="_blank">입장하기</a>
-                  <button class="btn copy" data-copy="https://zep.us/play/YvlKLn">복사</button>
-                  <button class="btn qr" data-qr-title="정보보안 03" data-qr-url="https://zep.us/play/YvlKLn">QR</button>
+                  <a class="btn primary" href="https://zep.us/play/BjxNXw" target="_blank">입장하기</a>
+                  <button class="btn copy" data-copy="https://zep.us/play/BjxNXw">복사</button>
+                  <button class="btn qr" data-qr-title="정보보안 03" data-qr-url="https://zep.us/play/BjxNXw">QR</button>
                 </div>
               </div>
               <div class="zep-card">
-                <span class="type-badge type-zep">ZEP</span>
-                <div class="resource-title">정보보안4</div>
-                <div class="meta">10명 입장 가능</div>
+                <span class="type-badge type-zep-sports">ZEP</span>
+                <div class="resource-title">정보보안 04</div>
+                <div class="meta">zep.us/play/eXbNZK</div>
                 <div class="card-actions">
-                  <a class="btn primary" href="https://zep.us/play/5rxRmV" target="_blank">입장하기</a>
-                  <button class="btn copy" data-copy="https://zep.us/play/5rxRmV">복사</button>
-                  <button class="btn qr" data-qr-title="정보보안 04" data-qr-url="https://zep.us/play/5rxRmV">QR</button>
+                  <a class="btn primary" href="https://zep.us/play/eXbNZK" target="_blank">입장하기</a>
+                  <button class="btn copy" data-copy="https://zep.us/play/eXbNZK">복사</button>
+                  <button class="btn qr" data-qr-title="정보보안 04" data-qr-url="https://zep.us/play/eXbNZK">QR</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+
+        <article class="program-box searchable" data-type="zep" data-keywords="zep 바이오 파이썬 10명" data-password="1234">
+          <button class="accordion-btn" type="button">
+            <div class="accordion-left">
+              <h3>🧬 바이오 파이썬</h3>
+              <p>QR 1개당 10명 입장 가능 [개별 입장]</p>
+            </div>
+            <div class="accordion-right">
+              <div class="count-badge">4개</div>
+              <div class="accordion-icon">⌄</div>
+            </div>
+          </button>
+
+
+          <div class="accordion-panel" style="padding-top: 20px;">
+            <div class="zep-card-grid zep-grid-4">
+              <div class="zep-card">
+                <span class="type-badge type-zep-sports">ZEP</span>
+                <div class="resource-title">바이오 파이썬 01</div>
+                <div class="meta">zep.us/play/3PRlJW</div>
+                <div class="card-actions">
+                  <a class="btn primary" href="https://zep.us/play/3PRlJW" target="_blank">입장하기</a>
+                  <button class="btn copy" data-copy="https://zep.us/play/3PRlJW">복사</button>
+                  <button class="btn qr" data-qr-title="바이오 파이썬 01" data-qr-url="https://zep.us/play/3PRlJW">QR</button>
+                </div>
+              </div>
+              <div class="zep-card">
+                <span class="type-badge type-zep-sports">ZEP</span>
+                <div class="resource-title">바이오 파이썬 02</div>
+                <div class="meta">zep.us/play/GpbVYK</div>
+                <div class="card-actions">
+                  <a class="btn primary" href="https://zep.us/play/GpbVYK" target="_blank">입장하기</a>
+                  <button class="btn copy" data-copy="https://zep.us/play/GpbVYK">복사</button>
+                  <button class="btn qr" data-qr-title="바이오 파이썬 02" data-qr-url="https://zep.us/play/GpbVYK">QR</button>
+                </div>
+              </div>
+              <div class="zep-card">
+                <span class="type-badge type-zep-sports">ZEP</span>
+                <div class="resource-title">바이오 파이썬 03</div>
+                <div class="meta">zep.us/play/mkgOKd</div>
+                <div class="card-actions">
+                  <a class="btn primary" href="https://zep.us/play/mkgOKd" target="_blank">입장하기</a>
+                  <button class="btn copy" data-copy="https://zep.us/play/mkgOKd">복사</button>
+                  <button class="btn qr" data-qr-title="바이오 파이썬 03" data-qr-url="https://zep.us/play/mkgOKd">QR</button>
+                </div>
+              </div>
+              <div class="zep-card">
+                <span class="type-badge type-zep-sports">ZEP</span>
+                <div class="resource-title">바이오 파이썬 04</div>
+                <div class="meta">zep.us/play/gGAaK3</div>
+                <div class="card-actions">
+                  <a class="btn primary" href="https://zep.us/play/gGAaK3" target="_blank">입장하기</a>
+                  <button class="btn copy" data-copy="https://zep.us/play/gGAaK3">복사</button>
+                  <button class="btn qr" data-qr-title="바이오 파이썬 04" data-qr-url="https://zep.us/play/gGAaK3">QR</button>
                 </div>
               </div>
             </div>
@@ -2885,65 +2870,6 @@
                   <a class="btn primary" href="https://zep.us/play/JdL6MN" target="_blank">입장하기</a>
                   <button class="btn copy" data-copy="https://zep.us/play/JdL6MN">복사</button>
                   <button class="btn qr" data-qr-title="RSA암호 04" data-qr-url="https://zep.us/play/JdL6MN">QR</button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </article>
-
-        <article class="program-box searchable" data-type="zep" data-keywords="zep 바이오 파이썬 10명" data-password="1234">
-          <button class="accordion-btn" type="button">
-            <div class="accordion-left">
-              <h3>바이오 파이썬 맵</h3>
-              <p>1반당 2개 QR로 나누어 관리합니다. (2인 1조)</p>
-            </div>
-            <div class="accordion-right">
-              <div class="count-badge">1반</div>
-              <div class="accordion-icon">⌄</div>
-            </div>
-          </button>
-
-
-          <div class="accordion-panel" style="padding-top: 20px;">
-            <div class="zep-card-grid zep-grid-4">
-              <div class="zep-card">
-                <span class="type-badge type-zep">ZEP</span>
-                <div class="resource-title">바이오 파이썬1</div>
-                <div class="meta">10명 입장 가능</div>
-                <div class="card-actions">
-                  <a class="btn primary" href="https://zep.us/play/6PWvz5" target="_blank">입장하기</a>
-                  <button class="btn copy" data-copy="https://zep.us/play/6PWvz5">복사</button>
-                  <button class="btn qr" data-qr-title="바이오 파이썬 01" data-qr-url="https://zep.us/play/6PWvz5">QR</button>
-                </div>
-              </div>
-              <div class="zep-card">
-                <span class="type-badge type-zep">ZEP</span>
-                <div class="resource-title">바이오 파이썬2</div>
-                <div class="meta">10명 입장 가능</div>
-                <div class="card-actions">
-                  <a class="btn primary" href="https://zep.us/play/od4zqZ" target="_blank">입장하기</a>
-                  <button class="btn copy" data-copy="https://zep.us/play/od4zqZ">복사</button>
-                  <button class="btn qr" data-qr-title="바이오 파이썬 02" data-qr-url="https://zep.us/play/od4zqZ">QR</button>
-                </div>
-              </div>
-              <div class="zep-card">
-                <span class="type-badge type-zep">ZEP</span>
-                <div class="resource-title">바이오 파이썬3</div>
-                <div class="meta">10명 입장 가능</div>
-                <div class="card-actions">
-                  <a class="btn primary" href="https://zep.us/play/R5OdoR" target="_blank">입장하기</a>
-                  <button class="btn copy" data-copy="https://zep.us/play/R5OdoR">복사</button>
-                  <button class="btn qr" data-qr-title="바이오 파이썬 03" data-qr-url="https://zep.us/play/R5OdoR">QR</button>
-                </div>
-              </div>
-              <div class="zep-card">
-                <span class="type-badge type-zep">ZEP</span>
-                <div class="resource-title">바이오 파이썬4</div>
-                <div class="meta">10명 입장 가능</div>
-                <div class="card-actions">
-                  <a class="btn primary" href="https://zep.us/play/1GAnrO" target="_blank">입장하기</a>
-                  <button class="btn copy" data-copy="https://zep.us/play/1GAnrO">복사</button>
-                  <button class="btn qr" data-qr-title="바이오 파이썬 04" data-qr-url="https://zep.us/play/1GAnrO">QR</button>
                 </div>
               </div>
             </div>
