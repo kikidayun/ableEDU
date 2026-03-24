@@ -579,6 +579,16 @@
     box-shadow:0 10px 18px rgba(37,99,235,.18);
   }
 
+  .btn.open{
+    background:#eff6ff;
+    color:#2563eb;
+    border:1px solid #2563eb;
+  }
+
+  .btn.open:hover{
+    background:#cfe0ff;
+  }
+
   .btn.copy,
   .btn.qr,
   .btn.subtab{
@@ -779,6 +789,87 @@
     line-height:1.6;
     font-size:14px;
   }
+
+/* 프로그램별 자료 카드형 2열 */
+.section[data-group="program"] .list-head{
+  display:none;
+}
+
+.section[data-group="program"] .resource-list{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:6px;
+}
+
+.section[data-group="program"] .resource-row{
+  display:flex;
+  align-items:center;
+  gap:16px;
+  padding:10px 14px;
+  min-height:55px;
+  border:1px solid var(--line);
+  border-radius:18px;
+  background:#fcfdff;
+}
+
+.section[data-group="program"] .title-cell{
+  flex:1;
+  min-width:0;
+}
+
+.section[data-group="program"] .resource-title{
+  font-size:16px;
+  font-weight:700;
+  line-height:1.4;
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
+}
+
+.section[data-group="program"] .resource-desc{
+  flex:0 0 auto;
+  font-size:13px;
+  color:var(--muted);
+  white-space:nowrap;
+  text-align:left;
+}
+
+.section[data-group="program"] .actions{
+  margin-left:auto;
+  width:auto;
+  flex:0 0 auto;
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:flex-end;
+  gap:8px;
+}
+
+.section[data-group="program"] .type-badge{
+  flex:0 0 auto;
+}
+
+@media (max-width: 1100px){
+  .section[data-group="program"] .resource-list{
+    grid-template-columns:1fr;
+  }
+}
+
+@media (max-width: 768px){
+  .section[data-group="program"] .resource-row{
+    flex-direction:column;
+    align-items:flex-start;
+  }
+
+  .section[data-group="program"] .resource-desc{
+    white-space:normal;
+  }
+
+  .section[data-group="program"] .actions{
+    margin-left:0;
+    justify-content:flex-start;
+    width:100%;
+  }
+}
 
   @media (max-width: 1200px){
     .hero-tools{grid-template-columns:1fr;}
@@ -1325,672 +1416,587 @@
 
       </div>
     </section>
+<section class="section" data-group="program">
+  <div class="section-head">
+    <div>
+      <h2>📄 프로그램별 자료</h2>
+    </div>
+  </div>
 
-    <section class="section" data-group="program">
-      <div class="section-head">
-        <div>
-          <h2>📄 프로그램별 자료</h2>
+  <div class="accordion-group">
+
+    <article class="program-box searchable" data-type="program" 
+      data-keywords="디지털 리터러시 초등 중·고등 카피라이터 실습 엑셀 xlsx 유인물 hwp pdf" data-password="1234">
+      <button class="accordion-btn" type="button">
+        <div class="accordion-left">
+          <h3>디지털 리터러시</h3>
+        </div>
+        <div class="accordion-right">
+          <div class="count-badge">2개</div>
+          <div class="accordion-icon">⌄</div>
+        </div>
+      </button>
+
+      <div class="accordion-panel">
+        <div class="resource-list">
+          <div class="resource-row">
+            <span class="type-badge type-file">FILE</span>
+            <div class="title-cell">
+              <div class="resource-title">카피라이터 실습 (초등)</div>
+            </div>
+            <div class="resource-desc">출력용 (2인 1조)</div>
+            <div class="actions">
+              <a class="btn primary" href="./files/bigdata/digital-literacy-elementary.pdf" target="_blank">출력</a>
+              <a class="btn" href="./files/bigdata/digital-literacy-elementary.hwp" download>다운로드</a>
+            </div>
+          </div>
+
+          <div class="resource-row">
+            <span class="type-badge type-file">FILE</span>
+            <div class="title-cell">
+              <div class="resource-title">카피라이터 실습 (중·고등)</div>
+            </div>
+            <div class="resource-desc">출력용 (2인 1조)</div>
+            <div class="actions">
+              <a class="btn primary" href="./files/bigdata/digital-literacy-high.pdf" target="_blank">출력</a>
+              <a class="btn" href="./files/bigdata/digital-literacy-high.hwp" download>다운로드</a>
+            </div>
+          </div>
         </div>
       </div>
+    </article>
 
-      <div class="accordion-group">
+    <article class="program-box searchable" data-type="program" 
+      data-keywords="빅데이터 경제 주식 투자 시뮬레이션 유인물 활동지 한글 hwp pdf" data-password="1234">
+      <button class="accordion-btn" type="button">
+        <div class="accordion-left">
+          <h3>빅데이터 경제</h3>
+        </div>
+        <div class="accordion-right">
+          <div class="count-badge">2개</div>
+          <div class="accordion-icon">⌄</div>
+        </div>
+      </button>
 
-      <article class="program-box searchable" data-type="program" 
-        data-keywords="디지털 리터러시 초등 중·고등 카피라이터 실습 엑셀 xlsx 유인물 hwp pdf" data-password="1234">
-        <button class="accordion-btn" type="button">
-          <div class="accordion-left">
-            <h3>디지털 리터러시</h3>
-          </div>
-          <div class="accordion-right">
-            <div class="count-badge">2개</div>
-            <div class="accordion-icon">⌄</div>
-          </div>
-        </button>
-
-        <div class="accordion-panel">
-          <div class="list-head">
-            <div>유형</div>
-            <div>자료명</div>
-            <div>설명</div>
-            <div>작업</div>
-          </div>
-
-          <div class="resource-list">
-            <div class="resource-row">
-              <div><span class="type-badge type-file">FILE</span></div>
-              <div class="title-cell">
-                <div class="resource-title">카피라이터 실습 (초등)</div>
-              </div>
-              <div class="resource-desc">출력용 (2인 1조)</div>
-              <div class="actions">
-                <a class="btn primary" href="./files/bigdata/digital-literacy-elementary.pdf" target="_blank"> 출력</a>
-                <a class="btn" href="./files/bigdata/digital-literacy-elementary.hwp" download>다운로드</a>
-              </div>
+      <div class="accordion-panel">
+        <div class="resource-list">
+          <div class="resource-row">
+            <span class="type-badge type-site">SITE</span>
+            <div class="title-cell">
+              <div class="resource-title">주식 시뮬레이션 A</div>
             </div>
-
-            <div class="resource-row">
-              <div><span class="type-badge type-file">FILE</span></div>
-              <div class="title-cell">
-                <div class="resource-title">카피라이터 실습 (중·고등)</div>
-              </div>
-              <div class="resource-desc">출력용 (2인 1조)</div>
-              <div class="actions">
-                <a class="btn primary" href="./files/bigdata/digital-literacy-high.pdf" target="_blank"> 출력</a>
-                <a class="btn" href="./files/bigdata/digital-literacy-high.hwp" download>다운로드</a>
-              </div>
-            </div>
-          </div> </div>
-      </article>
-
-        <article class="program-box searchable" data-type="program" 
-        data-keywords="빅데이터 경제 주식 투자 시뮬레이션 유인물 활동지 한글 hwp pdf" data-password="1234">
-          <button class="accordion-btn" type="button">
-            <div class="accordion-left">
-              <h3>빅데이터 경제</h3>
-            </div>
-            <div class="accordion-right">
-              <div class="count-badge">2개</div>
-              <div class="accordion-icon">⌄</div>
-            </div>
-          </button>
-
-          <div class="accordion-panel">
-            <div class="list-head">
-              <div>유형</div>
-              <div>자료명</div>
-              <div>설명</div>
-              <div>작업</div>
-            </div>
-
-            <div class="resource-list">
-              <div class="resource-row">
-                <div><span class="type-badge type-site">SITE</span></div>
-                <div class="title-cell">
-                  <div class="resource-title">주식 시뮬레이션 A</div>
-                </div>
-                <div class="resource-desc">강사용</div>
-                <div class="actions">
-                  <a class="btn primary" href="https://able0220.github.io/stockgame-A/" target="_blank">새 탭 열기</a>
-                  <button class="btn copy" data-copy="https://able0220.github.io/stockgame-A/">링크 복사</button>
-                </div>
-              </div>
-
-              <div class="resource-row">
-                <div><span class="type-badge type-file">FILE</span></div>
-                <div class="title-cell">
-                  <div class="resource-title">빅데이터 경제 학생 유인물</div>
-                </div>
-                <div class="resource-desc">출력용 (예비)</div>
-                <div class="actions">
-                  <a class="btn primary" href="./files/bigdata/bigdata-stockgame-A.pdf" target="_blank"> 출력</a>
-                  <a class="btn" href="./files/bigdata/bigdata-stockgame-A.hwp" download="빅데이터 경제 학생 유인물.hwp">다운로드</a>
-                </div>
-              </div>
-
+            <div class="resource-desc">강사용</div>
+            <div class="actions">
+              <a class="btn open" href="https://able0220.github.io/stockgame-A/" target="_blank">새 탭 열기</a>
+              <button class="btn copy" data-copy="https://able0220.github.io/stockgame-A/">링크 복사</button>
             </div>
           </div>
-        </article>
 
-        <article class="program-box searchable" data-type="program" 
-        data-keywords="빅데이터 분석 데이터분석 상권분석 차량추천 자동차추천 cars data 엑셀 xlsx 유인물 hwp pdf" data-password="1234">
-          <button class="accordion-btn" type="button">
-            <div class="accordion-left">
-              <h3>빅데이터 분석</h3>
+          <div class="resource-row">
+            <span class="type-badge type-file">FILE</span>
+            <div class="title-cell">
+              <div class="resource-title">빅데이터 경제 학생 유인물</div>
             </div>
-            <div class="accordion-right">
-              <div class="count-badge">3개</div>
-              <div class="accordion-icon">⌄</div>
-            </div>
-          </button>
-
-          <div class="accordion-panel">
-            <div class="list-head">
-              <div>유형</div>
-              <div>자료명</div>
-              <div>설명</div>
-              <div>작업</div>
-            </div>
-
-            <div class="resource-list">
-              <div class="resource-row">
-                <div><span class="type-badge type-site">SITE</span></div>
-                <div class="title-cell">
-                  <div class="resource-title">상권 분석 사이트</div>
-                </div>
-                <div class="resource-desc">공유용 (패들렛)</div>
-                <div class="actions">
-                  <a class="btn primary" href="https://able0220.github.io/localbiz/" target="_blank">새 탭 열기</a>
-                  <button class="btn copy" data-copy="https://able0220.github.io/localbiz/">링크 복사</button>
-                </div>
-              </div>
-
-              <div class="resource-row">
-                <div><span class="type-badge type-file">FILE</span></div>
-                <div class="title-cell">
-                  <div class="resource-title">cars Data 엑셀 파일</div>
-                </div>
-                <div class="resource-desc">공유용 (패들렛)</div>
-                <div class="actions">
-                  <a class="btn" href="./files/bigdata/bigdata-cars-data.xlsx" download>다운로드</a>
-                </div>
-              </div>
-
-              <div class="resource-row">
-                <div><span class="type-badge type-file">FILE</span></div>
-                <div class="title-cell">
-                  <div class="resource-title">빅데이터 분석 유인물</div>
-                </div>
-                <div class="resource-desc">출력용 (2인 1조)</div>
-                <div class="actions">
-                  <a class="btn primary" href="./files/bigdata/bigdata-car-recommend.pdf" target="_blank"> 출력</a>
-                  <a class="btn" href="./files/bigdata/bigdata-car-recommend.hwp" download>다운로드</a>
-                </div>
-              </div>
+            <div class="resource-desc">출력용 (예비)</div>
+            <div class="actions">
+              <a class="btn primary" href="./files/bigdata/bigdata-stockgame-A.pdf" target="_blank">출력</a>
+              <a class="btn" href="./files/bigdata/bigdata-stockgame-A.hwp" download="빅데이터 경제 학생 유인물.hwp">다운로드</a>
             </div>
           </div>
-        </article>
-
-        <article class="program-box searchable" data-type="program" 
-        data-keywords="콘텐츠 기획 스피드퀴즈 퀴즈 카테고리형 기획안 유인물 한글 hwp pdf" data-password="1234">
-          <button class="accordion-btn" type="button">
-            <div class="accordion-left">
-              <h3>콘텐츠 기획</h3>
-            </div>
-            <div class="accordion-right">
-              <div class="count-badge">4개</div>
-              <div class="accordion-icon">⌄</div>
-            </div>
-          </button>
-
-          <div class="accordion-panel">
-            <div class="list-head">
-              <div>유형</div>
-              <div>자료명</div>
-              <div>설명</div>
-              <div>작업</div>
-            </div>
-
-            <div class="resource-list">
-              <div class="resource-row">
-                <div><span class="type-badge type-site">SITE</span></div>
-                <div class="title-cell">
-                  <div class="resource-title">스피드퀴즈</div>
-                </div>
-                <div class="resource-desc">강사용 (문제)</div>
-                <div class="actions">
-                  <a class="btn primary" href="https://able0220.github.io/quiz1/" target="_blank">새 탭 열기</a>
-                  <button class="btn copy" data-copy="https://able0220.github.io/quiz1/">링크 복사</button>
-                </div>
-              </div>
-
-              <div class="resource-row">
-                <div><span class="type-badge type-site">SITE</span></div>
-                <div class="title-cell">
-                  <div class="resource-title">스피드퀴즈</div>
-                </div>
-                <div class="resource-desc">강사용 (카테고리)</div>
-                <div class="actions">
-                  <a class="btn primary" href="https://able0220.github.io/quiz2/" target="_blank">새 탭 열기</a>
-                  <button class="btn copy" data-copy="https://able0220.github.io/quiz2/">링크 복사</button>
-                </div>
-              </div>
-
-              <div class="resource-row">
-                <div><span class="type-badge type-site">SITE</span></div>
-                <div class="title-cell">
-                  <div class="resource-title">콘텐츠 기획안</div>
-                </div>
-                <div class="resource-desc">공유용 (패들렛)</div>
-                <div class="actions">
-                  <a class="btn primary" href="https://able0220.github.io/content-plan/" target="_blank">새 탭 열기</a>
-                  <button class="btn copy" data-copy="https://able0220.github.io/content-plan/">링크 복사</button>
-                </div>
-              </div>
-
-              <div class="resource-row">
-                <div><span class="type-badge type-file">FILE</span></div>
-                <div class="title-cell">
-                  <div class="resource-title">콘텐츠 기획안</div>
-                </div>
-                <div class="resource-desc">출력용 (조별)</div>
-                <div class="actions">
-                  <a class="btn primary" href="./files/content/content-planning.pdf" target="_blank"> 출력</a>
-                  <a class="btn" href="./files/content/content-planning.hwp" download>다운로드</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </article>
-
-        <article class="program-box searchable" data-type="program" 
-        data-keywords="광고 광고기획 크리에이티브 광고기획 광고기획안 유인물 pdf" data-password="1234">
-          <button class="accordion-btn" type="button">
-            <div class="accordion-left">
-              <h3>크리에이티브 광고 기획</h3>
-            </div>
-            <div class="accordion-right">
-              <div class="count-badge">1개</div>
-              <div class="accordion-icon">⌄</div>
-            </div>
-          </button>
-
-          <div class="accordion-panel">
-            <div class="list-head">
-              <div>유형</div>
-              <div>자료명</div>
-              <div>설명</div>
-              <div>작업</div>
-            </div>
-
-            <div class="resource-list">
-              <div class="resource-row">
-                <div><span class="type-badge type-file">FILE</span></div>
-                <div class="title-cell">
-                  <div class="resource-title">크리에이티브 광고 기획안</div>
-                </div>
-                <div class="resource-desc">출력용 (조별)</div>
-                <div class="actions">
-                  <a class="btn primary" href="./files/content/creative-ad-planning.pdf" target="_blank"> 출력</a>
-                  <a class="btn" href="./files/content/creative-ad-planning.hwp" download>다운로드</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </article>
-
-        <article class="program-box searchable" data-type="program" 
-          data-keywords="스토리 기획 세계관 미니실습 스토리기획자 유인물 pdf" data-password="1234">
-          <button class="accordion-btn" type="button">
-            <div class="accordion-left">
-              <h3>스토리 기획</h3>
-            </div>
-            <div class="accordion-right">
-              <div class="count-badge">2개</div>
-              <div class="accordion-icon">⌄</div>
-            </div>
-          </button>
-
-          <div class="accordion-panel">
-            <div class="list-head">
-              <div>유형</div>
-              <div>자료명</div>
-              <div>설명</div>
-              <div>작업</div>
-            </div>
-            
-            <div class="resource-list">
-              <div class="resource-row">
-                <div><span class="type-badge type-file">FILE</span></div>
-                <div class="title-cell">
-                  <div class="resource-title">스토리 기획자 미니실습</div>
-                </div>
-                <div class="resource-desc">출력용</div>
-                <div class="actions">
-                  <a class="btn primary" href="./files/content/story-planning-mini.pdf" target="_blank"> 출력</a>
-                  <a class="btn" href="./files/content/story-planning-mini.hwp" download>다운로드</a>
-                </div>
-              </div>
-
-              <div class="resource-row">
-                <div><span class="type-badge type-file">FILE</span></div>
-                <div class="title-cell">
-                  <div class="resource-title">스토리 기획자 세계관 기획</div>
-                </div>
-                <div class="resource-desc">출력용</div>
-                <div class="actions">
-                  <a class="btn primary" href="./files/content/story-planning-world.pdf" target="_blank"> 출력</a>
-                  <a class="btn" href="./files/content/story-planning-world.hwp" download>다운로드</a>
-                </div>
-              </div>
-            </div> </div>
-        </article>
-
-        <article class="program-box searchable" data-type="program" 
-        data-keywords="앱개발 앱디자인 앱 인벤터 앱인벤터 aia randomgame touchgame" data-password="1234">
-          <button class="accordion-btn" type="button">
-            <div class="accordion-left">
-              <h3>앱 개발·앱 디자인</h3> </div>
-            <div class="accordion-right">
-              <div class="count-badge">3개</div>
-              <div class="accordion-icon">⌄</div>
-            </div>
-          </button>
-
-          <div class="accordion-panel" style="padding-top: 20px;">
-            <div class="list-head">
-              <div>유형</div>
-              <div>자료명</div>
-              <div>설명</div>
-              <div>작업</div>
-            </div>
-
-            <div class="resource-list">
-              <div class="resource-row">
-                <div><span class="type-badge type-file">FILE</span></div>
-                <div class="title-cell">
-                  <div class="resource-title">랜덤게임.aia</div>
-                </div>
-                <div class="resource-desc">공유용 (패들렛)</div>
-                <div class="actions">
-                  <a class="btn" href="./files/content/randomgame.aia" download>다운로드</a>
-                </div>
-              </div>
-
-              <div class="resource-row">
-                <div><span class="type-badge type-file">FILE</span></div>
-                <div class="title-cell">
-                  <div class="resource-title">터치게임.aia</div>
-                </div>
-                <div class="resource-desc">공유용 (패들렛)</div>
-                <div class="actions">
-                  <a class="btn" href="./files/content/touchgame.aia" download>다운로드</a>
-                </div>
-              </div>
-
-              <div class="resource-row">
-                <div><span class="type-badge type-file">FILE</span></div>
-                <div class="title-cell">
-                  <div class="resource-title">스터디플래너.aia</div>
-                </div>
-                <div class="resource-desc">공유용 (패들렛)</div>
-                <div class="actions">
-                  <a class="btn" href="./files/content/studyplanner.aia" download>다운로드</a>
-                </div>
-              </div>
-
-              <div class="resource-row">
-                <div><span class="type-badge type-file">FILE</span></div>
-                <div class="title-cell">
-                  <div class="resource-title">타이머.aia</div>
-                </div>
-                <div class="resource-desc">공유용 (패들렛)</div>
-                <div class="actions">
-                  <a class="btn" href="./files/content/timer.aia" download>다운로드</a>
-                </div>
-              </div>
-
-            </div> </div>
-        </article>
-
-        <article class="program-box searchable" data-type="program" 
-        data-keywords="로고디자인 인포메이션 디자인 UX·UI design 기업별 Quiver 유인물 PDF HWP" data-password="1234">
-          <button class="accordion-btn" type="button">
-            <div class="accordion-left">
-              <h3>시각디자인·로고 디자인·인포메이션</h3> </div>
-            <div class="accordion-right">
-              <div class="count-badge">5개</div>
-              <div class="accordion-icon">⌄</div>
-            </div>
-          </button>
-
-          <div class="accordion-panel" style="padding-top: 20px;">
-            <div class="list-head">
-              <div>유형</div>
-              <div>자료명</div>
-              <div>설명</div>
-              <div>작업</div>
-            </div>
-
-            <div class="resource-list">
-              <div class="resource-row">
-                <div><span class="type-badge type-pdf">PDF</span></div>
-                <div class="title-cell">
-                  <div class="resource-title">시각디자인 Quiver: Murphy(양)</div>
-                </div>
-                <div class="resource-desc">출력용 (개인)</div>
-                <div class="actions">
-                  <a class="btn primary" href="./files/design/quiver-murphy.pdf" target="_blank"> 출력</a>
-                  <a class="btn" href="./files/design/quiver-murphy.pdf" download>다운로드</a>
-                </div>
-              </div>
-
-            <div class="resource-list">
-              <div class="resource-row">
-                <div><span class="type-badge type-pdf">PDF</span></div>
-                <div class="title-cell">
-                  <div class="resource-title">시각디자인 Quiver: Penfold(펭귄)</div>
-                </div>
-                <div class="resource-desc">출력용 (개인)</div>
-                <div class="actions">
-                  <a class="btn primary" href="./files/design/quiver-Penfold.pdf" target="_blank"> 출력</a>
-                  <a class="btn" href="./files/design/quiver-Penfold.pdf" download>다운로드</a>
-                </div>
-              </div>
-
-            <div class="resource-list">
-              <div class="resource-row">
-                <div><span class="type-badge type-pdf">PDF</span></div>
-                <div class="title-cell">
-                  <div class="resource-title">시각디자인 Quiver: Ruby(토끼)</div>
-                </div>
-                <div class="resource-desc">출력용 (개인)</div>
-                <div class="actions">
-                  <a class="btn primary" href="./files/design/quiver-Ruby.pdf" target="_blank"> 출력</a>
-                  <a class="btn" href="./files/design/quiver-Ruby.pdf" download>다운로드</a>
-                </div>
-              </div>
-
-              <div class="resource-row">
-                <div><span class="type-badge type-file">FILE</span></div>
-                <div class="title-cell">
-                  <div class="resource-title">로고 디자인 기업별 유인물</div>
-                </div>
-                <div class="resource-desc">출력용 (예비)</div>
-                <div class="actions">
-                  <a class="btn primary" href="./files/design/logo-design.pdf" target="_blank"> 출력</a>
-                  <a class="btn" href="./files/design/logo-design.hwp" download>다운로드</a>
-                </div>
-              </div>
-
-              <div class="resource-row">
-                <div><span class="type-badge type-file">FILE</span></div>
-                <div class="title-cell">
-                  <div class="resource-title">인포메이션 디자인 UX·UI 분석</div>
-                </div>
-                <div class="resource-desc">출력용 (2인1조)</div>
-                <div class="actions">
-                  <a class="btn primary" href="./files/design/information-design-uxui.pdf" target="_blank"> 출력</a>
-                  <a class="btn" href="./files/design/information-design-uxui.hwp" download>다운로드</a>
-                </div>
-              </div>
-              
-            </div> </div>
-        </article>
-
-        <article class="program-box searchable" data-type="program" 
-        data-keywords="스타트업 설계 창업 창업계획 창업계획서 사업계획 사이트 유인물 한글 hwp pdf" data-password="1234">
-          <button class="accordion-btn" type="button">
-            <div class="accordion-left">
-              <h3>스타트업 설계</h3>
-            </div>
-            <div class="accordion-right">
-              <div class="count-badge">1개</div>
-              <div class="accordion-icon">⌄</div>
-            </div>
-          </button>
-
-          <div class="accordion-panel">
-            <div class="list-head">
-              <div>유형</div>
-              <div>자료명</div>
-              <div>설명</div>
-              <div>작업</div>
-            </div>
-            <div class="resource-list">
-              <div class="resource-row">
-                <div><span class="type-badge type-site">SITE</span></div>
-                <div class="title-cell"><div class="resource-title">창업계획서</div></div>
-                <div class="resource-desc">공유용 (패들렛)</div>
-                <div class="actions">
-                  <a class="btn primary" href="https://able0220.github.io/startup-plan/" target="_blank">새 탭 열기</a>
-                  <button class="btn copy" data-copy="https://able0220.github.io/startup-plan/">링크 복사</button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </article>
-
-        <article class="program-box searchable" data-type="program" 
-        data-keywords="IMC 통합 마케팅 커뮤니케이션 유인물 한글 hwp pdf" data-password="1234">
-          <button class="accordion-btn" type="button">
-            <div class="accordion-left">
-              <h3>IMC (통합 마케팅 커뮤니케이션)</h3>
-            </div>
-            <div class="accordion-right">
-              <div class="count-badge">2개</div>
-              <div class="accordion-icon">⌄</div>
-            </div>
-          </button>
-
-        <div class="accordion-panel">
-          <div class="list-head">
-            <div>유형</div>
-            <div>자료명</div>
-            <div>설명</div>
-            <div>작업</div>
-          </div>
-          
-          <div class="resource-list">
-            <div class="resource-row">
-              <div><span class="type-badge type-pdf">PDF</span></div>
-              <div class="title-cell">
-                <div class="resource-title">MC 상세표</div>
-              </div>
-              <div class="resource-desc">강사용</div>
-              <div class="actions">
-                <a class="btn" href="./files/Management/imc-product-sheet.pdf" download>다운로드</a>
-              </div>
-            </div>
-
-            <div class="resource-row">
-              <div><span class="type-badge type-file">FILE</span></div>
-              <div class="title-cell">
-                <div class="resource-title">IMC 마케팅 기획안</div>
-              </div>
-              <div class="resource-desc">출력용 (조별)</div>
-              <div class="actions">
-                <a class="btn primary" href="./files/Management/imc-quote.pdf" target="_blank"> 출력</a>
-                <a class="btn" href="./files/Management/imc-quote.hwp"  download>다운로드</a>
-              </div>
-            </div>
-          </div> </div>
-        </article>
-
-        <article class="program-box searchable" data-type="program" 
-        data-keywords="경제전략 경매게임 경제 게임 활동지 유인물 한글 hwp pdf" data-password="1234">
-          <button class="accordion-btn" type="button">
-            <div class="accordion-left">
-              <h3>경제전략</h3>
-            </div>
-            <div class="accordion-right">
-              <div class="count-badge">파일</div>
-              <div class="accordion-icon">⌄</div>
-            </div>
-          </button>
-
-          <div class="accordion-panel">
-            <div class="list-head">
-              <div>유형</div>
-              <div>자료명</div>
-              <div>설명</div>
-              <div>작업</div>
-            </div>
-            <div class="resource-list">
-              <div class="resource-row">
-                <div><span class="type-badge type-site">SITE</span></div>
-                <div class="title-cell"><div class="resource-title">경매게임 1</div></div>
-                <div class="resource-desc">강사용</div>
-                <div class="actions">
-                  <a class="btn primary" href="https://able0220.github.io/auction1/" target="_blank">새 탭 열기</a>
-                  <button class="btn copy" data-copy="https://able0220.github.io/auction1/">링크 복사</button>
-                </div>
-              </div>
-              <div class="resource-row">
-                <div><span class="type-badge type-site">SITE</span></div>
-                <div class="title-cell"><div class="resource-title">경매게임 2</div></div>
-                <div class="resource-desc">강사용</div>
-                <div class="actions">
-                  <a class="btn primary" href="https://able0220.github.io/auction2/" target="_blank">새 탭 열기</a>
-                  <button class="btn copy" data-copy="https://able0220.github.io/auction2/">링크 복사</button>
-                </div>
-              </div>
-              <div class="resource-row">
-                <div><span class="type-badge type-file">FILE</span></div>
-                <div class="title-cell"><div class="resource-title">경제전략 유인물</div></div>
-                <div class="resource-desc">출력용 (조별)</div>
-                <div class="actions">
-                  <a class="btn primary" href="./files/Management/economic-auction.pdf" target="_blank"> 출력</a>
-                  <a class="btn" href="./files/Management/economic-auction.hwp" download>다운로드</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </article>
-
-        <article class="program-box searchable" data-type="program" 
-        data-keywords="정책연구 정책 국정운영 시뮬레이션 성과기록 시트 활동지 유인물 한글 hwp pdf" data-password="1234">
-          <button class="accordion-btn" type="button">
-            <div class="accordion-left">
-              <h3>정책연구</h3>
-              <!-- <p>잠금 설정된 과목입니다. 비밀번호 입력 후 자료를 확인할 수 있습니다.</p> -->
-            </div>
-            <div class="accordion-right">
-              <div class="count-badge">파일</div>
-              <!-- <div class="count-badge">잠금</div> -->
-              <div class="accordion-icon">⌄</div>
-            </div>
-          </button>
-          <!-- 잠금 진행할 경우 class="program-box searchable locked"로 수정 -->
-
-          <!-- <div class="lock-panel">
-            <div class="lock-card">
-              <div class="lock-card-top">
-                <div class="lock-badge">🔒</div>
-                <div>
-                  <h4>비밀번호가 필요한 자료입니다</h4>
-                  <p>비밀번호를 입력하면 자료 목록이 열립니다.</p>
-                </div>
-              </div>
-              <div class="lock-form">
-                <input class="lock-input" type="password" placeholder="비밀번호 입력" />
-                <button class="btn primary unlock-btn" type="button">확인</button>
-              </div>
-              <div class="lock-error">비밀번호가 올바르지 않습니다.</div>
-            </div>
-          </div> -->
-
-
-          <div class="accordion-panel">
-            <div class="list-head">
-              <div>유형</div>
-              <div>자료명</div>
-              <div>설명</div>
-              <div>작업</div>
-            </div>
-            <div class="resource-list">
-              <div class="resource-row">
-                <div><span class="type-badge type-site">SITE</span></div>
-                <div class="title-cell"><div class="resource-title">국정 운영 시뮬레이션</div></div>
-                <div class="resource-desc">강사용</div>
-                <div class="actions">
-                  <a class="btn primary" href="https://able0220.github.io/policy/" target="_blank">새 탭 열기</a>
-                  <button class="btn copy" data-copy="https://able0220.github.io/policy/">링크 복사</button>
-                </div>
-              </div>
-              <div class="resource-row">
-                <div><span class="type-badge type-file">FILE</span></div>
-                <div class="title-cell"><div class="resource-title">국정운영 성과 기록 시트</div></div>
-                <div class="resource-desc">출력용</div>
-                <div class="actions">
-                  <a class="btn primary" href="./files/Management/policy-research.pdf" target="_blank"> 출력</a>
-                  <a class="btn" href="./files/Management/policy-research.hwp" download>다운로드</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </article>
+        </div>
       </div>
-    </section>
+    </article>
+
+    <article class="program-box searchable" data-type="program" 
+      data-keywords="빅데이터 분석 데이터분석 상권분석 차량추천 자동차추천 cars data 엑셀 xlsx 유인물 hwp pdf" data-password="1234">
+      <button class="accordion-btn" type="button">
+        <div class="accordion-left">
+          <h3>빅데이터 분석</h3>
+        </div>
+        <div class="accordion-right">
+          <div class="count-badge">3개</div>
+          <div class="accordion-icon">⌄</div>
+        </div>
+      </button>
+
+      <div class="accordion-panel">
+        <div class="resource-list">
+          <div class="resource-row">
+            <span class="type-badge type-site">SITE</span>
+            <div class="title-cell">
+              <div class="resource-title">상권 분석 사이트</div>
+            </div>
+            <div class="resource-desc">공유용 (패들렛)</div>
+            <div class="actions">
+              <a class="btn open" href="https://able0220.github.io/localbiz/" target="_blank">새 탭 열기</a>
+              <button class="btn copy" data-copy="https://able0220.github.io/localbiz/">링크 복사</button>
+            </div>
+          </div>
+
+          <div class="resource-row">
+            <span class="type-badge type-file">FILE</span>
+            <div class="title-cell">
+              <div class="resource-title">cars Data 엑셀 파일</div>
+            </div>
+            <div class="resource-desc">공유용 (패들렛)</div>
+            <div class="actions">
+              <a class="btn" href="./files/bigdata/bigdata-cars-data.xlsx" download>다운로드</a>
+            </div>
+          </div>
+
+          <div class="resource-row">
+            <span class="type-badge type-file">FILE</span>
+            <div class="title-cell">
+              <div class="resource-title">빅데이터 분석 유인물</div>
+            </div>
+            <div class="resource-desc">출력용 (2인 1조)</div>
+            <div class="actions">
+              <a class="btn primary" href="./files/bigdata/bigdata-car-recommend.pdf" target="_blank">출력</a>
+              <a class="btn" href="./files/bigdata/bigdata-car-recommend.hwp" download>다운로드</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <article class="program-box searchable" data-type="program" 
+      data-keywords="콘텐츠 기획 스피드퀴즈 퀴즈 카테고리형 기획안 유인물 한글 hwp pdf" data-password="1234">
+      <button class="accordion-btn" type="button">
+        <div class="accordion-left">
+          <h3>콘텐츠 기획</h3>
+        </div>
+        <div class="accordion-right">
+          <div class="count-badge">4개</div>
+          <div class="accordion-icon">⌄</div>
+        </div>
+      </button>
+
+      <div class="accordion-panel">
+        <div class="resource-list">
+          <div class="resource-row">
+            <span class="type-badge type-site">SITE</span>
+            <div class="title-cell">
+              <div class="resource-title">스피드퀴즈</div>
+            </div>
+            <div class="resource-desc">강사용 (문제)</div>
+            <div class="actions">
+              <a class="btn open" href="https://able0220.github.io/quiz1/" target="_blank">새 탭 열기</a>
+              <button class="btn copy" data-copy="https://able0220.github.io/quiz1/">링크 복사</button>
+            </div>
+          </div>
+
+          <div class="resource-row">
+            <span class="type-badge type-site">SITE</span>
+            <div class="title-cell">
+              <div class="resource-title">스피드퀴즈</div>
+            </div>
+            <div class="resource-desc">강사용 (카테고리)</div>
+            <div class="actions">
+              <a class="btn open" href="https://able0220.github.io/quiz2/" target="_blank">새 탭 열기</a>
+              <button class="btn copy" data-copy="https://able0220.github.io/quiz2/">링크 복사</button>
+            </div>
+          </div>
+
+          <div class="resource-row">
+            <span class="type-badge type-site">SITE</span>
+            <div class="title-cell">
+              <div class="resource-title">콘텐츠 기획안</div>
+            </div>
+            <div class="resource-desc">공유용 (패들렛)</div>
+            <div class="actions">
+              <a class="btn open" href="https://able0220.github.io/content-plan/" target="_blank">새 탭 열기</a>
+              <button class="btn copy" data-copy="https://able0220.github.io/content-plan/">링크 복사</button>
+            </div>
+          </div>
+
+          <div class="resource-row">
+            <span class="type-badge type-file">FILE</span>
+            <div class="title-cell">
+              <div class="resource-title">콘텐츠 기획안</div>
+            </div>
+            <div class="resource-desc">출력용 (조별)</div>
+            <div class="actions">
+              <a class="btn primary" href="./files/content/content-planning.pdf" target="_blank">출력</a>
+              <a class="btn" href="./files/content/content-planning.hwp" download>다운로드</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <article class="program-box searchable" data-type="program" 
+      data-keywords="광고 광고기획 크리에이티브 광고기획 광고기획안 유인물 pdf" data-password="1234">
+      <button class="accordion-btn" type="button">
+        <div class="accordion-left">
+          <h3>크리에이티브 광고 기획</h3>
+        </div>
+        <div class="accordion-right">
+          <div class="count-badge">1개</div>
+          <div class="accordion-icon">⌄</div>
+        </div>
+      </button>
+
+      <div class="accordion-panel">
+        <div class="resource-list">
+          <div class="resource-row">
+            <span class="type-badge type-file">FILE</span>
+            <div class="title-cell">
+              <div class="resource-title">크리에이티브 광고 기획안</div>
+            </div>
+            <div class="resource-desc">출력용 (조별)</div>
+            <div class="actions">
+              <a class="btn primary" href="./files/content/creative-ad-planning.pdf" target="_blank">출력</a>
+              <a class="btn" href="./files/content/creative-ad-planning.hwp" download>다운로드</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <article class="program-box searchable" data-type="program" 
+      data-keywords="스토리 기획 세계관 미니실습 스토리기획자 유인물 pdf" data-password="1234">
+      <button class="accordion-btn" type="button">
+        <div class="accordion-left">
+          <h3>스토리 기획</h3>
+        </div>
+        <div class="accordion-right">
+          <div class="count-badge">2개</div>
+          <div class="accordion-icon">⌄</div>
+        </div>
+      </button>
+
+      <div class="accordion-panel">
+        <div class="resource-list">
+          <div class="resource-row">
+            <span class="type-badge type-file">FILE</span>
+            <div class="title-cell">
+              <div class="resource-title">스토리 기획자 미니실습</div>
+            </div>
+            <div class="resource-desc">출력용</div>
+            <div class="actions">
+              <a class="btn primary" href="./files/content/story-planning-mini.pdf" target="_blank">출력</a>
+              <a class="btn" href="./files/content/story-planning-mini.hwp" download>다운로드</a>
+            </div>
+          </div>
+
+          <div class="resource-row">
+            <span class="type-badge type-file">FILE</span>
+            <div class="title-cell">
+              <div class="resource-title">스토리 기획자 세계관 기획</div>
+            </div>
+            <div class="resource-desc">출력용</div>
+            <div class="actions">
+              <a class="btn primary" href="./files/content/story-planning-world.pdf" target="_blank">출력</a>
+              <a class="btn" href="./files/content/story-planning-world.hwp" download>다운로드</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <article class="program-box searchable" data-type="program" 
+      data-keywords="앱개발 앱디자인 앱 인벤터 앱인벤터 aia randomgame touchgame" data-password="1234">
+      <button class="accordion-btn" type="button">
+        <div class="accordion-left">
+          <h3>앱 개발·앱 디자인</h3>
+        </div>
+        <div class="accordion-right">
+          <div class="count-badge">4개</div>
+          <div class="accordion-icon">⌄</div>
+        </div>
+      </button>
+
+      <div class="accordion-panel">
+        <div class="resource-list">
+          <div class="resource-row">
+            <span class="type-badge type-file">FILE</span>
+            <div class="title-cell">
+              <div class="resource-title">랜덤게임.aia</div>
+            </div>
+            <div class="resource-desc">공유용 (패들렛)</div>
+            <div class="actions">
+              <a class="btn" href="./files/content/randomgame.aia" download>다운로드</a>
+            </div>
+          </div>
+
+          <div class="resource-row">
+            <span class="type-badge type-file">FILE</span>
+            <div class="title-cell">
+              <div class="resource-title">터치게임.aia</div>
+            </div>
+            <div class="resource-desc">공유용 (패들렛)</div>
+            <div class="actions">
+              <a class="btn" href="./files/content/touchgame.aia" download>다운로드</a>
+            </div>
+          </div>
+
+          <div class="resource-row">
+            <span class="type-badge type-file">FILE</span>
+            <div class="title-cell">
+              <div class="resource-title">스터디플래너.aia</div>
+            </div>
+            <div class="resource-desc">공유용 (패들렛)</div>
+            <div class="actions">
+              <a class="btn" href="./files/content/studyplanner.aia" download>다운로드</a>
+            </div>
+          </div>
+
+          <div class="resource-row">
+            <span class="type-badge type-file">FILE</span>
+            <div class="title-cell">
+              <div class="resource-title">타이머.aia</div>
+            </div>
+            <div class="resource-desc">공유용 (패들렛)</div>
+            <div class="actions">
+              <a class="btn" href="./files/content/timer.aia" download>다운로드</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <article class="program-box searchable" data-type="program" 
+      data-keywords="로고디자인 인포메이션 디자인 UX·UI design 기업별 Quiver 유인물 PDF HWP" data-password="1234">
+      <button class="accordion-btn" type="button">
+        <div class="accordion-left">
+          <h3>시각디자인·로고 디자인·인포메이션</h3>
+        </div>
+        <div class="accordion-right">
+          <div class="count-badge">5개</div>
+          <div class="accordion-icon">⌄</div>
+        </div>
+      </button>
+
+      <div class="accordion-panel">
+        <div class="resource-list">
+          <div class="resource-row">
+            <span class="type-badge type-pdf">PDF</span>
+            <div class="title-cell">
+              <div class="resource-title">시각디자인 Quiver: Murphy(양)</div>
+            </div>
+            <div class="resource-desc">출력용 (개인)</div>
+            <div class="actions">
+              <a class="btn primary" href="./files/design/quiver-murphy.pdf" target="_blank">출력</a>
+              <a class="btn" href="./files/design/quiver-murphy.pdf" download>다운로드</a>
+            </div>
+          </div>
+
+          <div class="resource-row">
+            <span class="type-badge type-pdf">PDF</span>
+            <div class="title-cell">
+              <div class="resource-title">시각디자인 Quiver: Penfold(펭귄)</div>
+            </div>
+            <div class="resource-desc">출력용 (개인)</div>
+            <div class="actions">
+              <a class="btn primary" href="./files/design/quiver-Penfold.pdf" target="_blank">출력</a>
+              <a class="btn" href="./files/design/quiver-Penfold.pdf" download>다운로드</a>
+            </div>
+          </div>
+
+          <div class="resource-row">
+            <span class="type-badge type-pdf">PDF</span>
+            <div class="title-cell">
+              <div class="resource-title">시각디자인 Quiver: Ruby(토끼)</div>
+            </div>
+            <div class="resource-desc">출력용 (개인)</div>
+            <div class="actions">
+              <a class="btn primary" href="./files/design/quiver-Ruby.pdf" target="_blank">출력</a>
+              <a class="btn" href="./files/design/quiver-Ruby.pdf" download>다운로드</a>
+            </div>
+          </div>
+
+          <div class="resource-row">
+            <span class="type-badge type-file">FILE</span>
+            <div class="title-cell">
+              <div class="resource-title">로고 디자인 기업별 유인물</div>
+            </div>
+            <div class="resource-desc">출력용 (예비)</div>
+            <div class="actions">
+              <a class="btn primary" href="./files/design/logo-design.pdf" target="_blank">출력</a>
+              <a class="btn" href="./files/design/logo-design.hwp" download>다운로드</a>
+            </div>
+          </div>
+
+          <div class="resource-row">
+            <span class="type-badge type-file">FILE</span>
+            <div class="title-cell">
+              <div class="resource-title">인포메이션 디자인 UX·UI 분석</div>
+            </div>
+            <div class="resource-desc">출력용 (2인1조)</div>
+            <div class="actions">
+              <a class="btn primary" href="./files/design/information-design-uxui.pdf" target="_blank">출력</a>
+              <a class="btn" href="./files/design/information-design-uxui.hwp" download>다운로드</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <article class="program-box searchable" data-type="program" 
+      data-keywords="스타트업 설계 창업 창업계획 창업계획서 사업계획 사이트 유인물 한글 hwp pdf" data-password="1234">
+      <button class="accordion-btn" type="button">
+        <div class="accordion-left">
+          <h3>스타트업 설계</h3>
+        </div>
+        <div class="accordion-right">
+          <div class="count-badge">1개</div>
+          <div class="accordion-icon">⌄</div>
+        </div>
+      </button>
+
+      <div class="accordion-panel">
+        <div class="resource-list">
+          <div class="resource-row">
+            <span class="type-badge type-site">SITE</span>
+            <div class="title-cell">
+              <div class="resource-title">창업계획서</div>
+            </div>
+            <div class="resource-desc">공유용 (패들렛)</div>
+            <div class="actions">
+              <a class="btn open" href="https://able0220.github.io/startup-plan/" target="_blank">새 탭 열기</a>
+              <button class="btn copy" data-copy="https://able0220.github.io/startup-plan/">링크 복사</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <article class="program-box searchable" data-type="program" 
+      data-keywords="IMC 통합 마케팅 커뮤니케이션 유인물 한글 hwp pdf" data-password="1234">
+      <button class="accordion-btn" type="button">
+        <div class="accordion-left">
+          <h3>IMC (통합 마케팅 커뮤니케이션)</h3>
+        </div>
+        <div class="accordion-right">
+          <div class="count-badge">2개</div>
+          <div class="accordion-icon">⌄</div>
+        </div>
+      </button>
+
+      <div class="accordion-panel">
+        <div class="resource-list">
+          <div class="resource-row">
+            <span class="type-badge type-pdf">PDF</span>
+            <div class="title-cell">
+              <div class="resource-title">MC 상세표</div>
+            </div>
+            <div class="resource-desc">강사용</div>
+            <div class="actions">
+              <a class="btn" href="./files/Management/imc-product-sheet.pdf" download>다운로드</a>
+            </div>
+          </div>
+
+          <div class="resource-row">
+            <span class="type-badge type-file">FILE</span>
+            <div class="title-cell">
+              <div class="resource-title">IMC 마케팅 기획안</div>
+            </div>
+            <div class="resource-desc">출력용 (조별)</div>
+            <div class="actions">
+              <a class="btn primary" href="./files/Management/imc-quote.pdf" target="_blank">출력</a>
+              <a class="btn" href="./files/Management/imc-quote.hwp" download>다운로드</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <article class="program-box searchable" data-type="program" 
+      data-keywords="경제전략 경매게임 경제 게임 활동지 유인물 한글 hwp pdf" data-password="1234">
+      <button class="accordion-btn" type="button">
+        <div class="accordion-left">
+          <h3>경제전략</h3>
+        </div>
+        <div class="accordion-right">
+          <div class="count-badge">3개</div>
+          <div class="accordion-icon">⌄</div>
+        </div>
+      </button>
+
+      <div class="accordion-panel">
+        <div class="resource-list">
+          <div class="resource-row">
+            <span class="type-badge type-site">SITE</span>
+            <div class="title-cell">
+              <div class="resource-title">경매게임 1</div>
+            </div>
+            <div class="resource-desc">강사용</div>
+            <div class="actions">
+              <a class="btn open" href="https://able0220.github.io/auction1/" target="_blank">새 탭 열기</a>
+              <button class="btn copy" data-copy="https://able0220.github.io/auction1/">링크 복사</button>
+            </div>
+          </div>
+
+          <div class="resource-row">
+            <span class="type-badge type-site">SITE</span>
+            <div class="title-cell">
+              <div class="resource-title">경매게임 2</div>
+            </div>
+            <div class="resource-desc">강사용</div>
+            <div class="actions">
+              <a class="btn open" href="https://able0220.github.io/auction2/" target="_blank">새 탭 열기</a>
+              <button class="btn copy" data-copy="https://able0220.github.io/auction2/">링크 복사</button>
+            </div>
+          </div>
+
+          <div class="resource-row">
+            <span class="type-badge type-file">FILE</span>
+            <div class="title-cell">
+              <div class="resource-title">경제전략 유인물</div>
+            </div>
+            <div class="resource-desc">출력용 (조별)</div>
+            <div class="actions">
+              <a class="btn primary" href="./files/Management/economic-auction.pdf" target="_blank">출력</a>
+              <a class="btn" href="./files/Management/economic-auction.hwp" download>다운로드</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <article class="program-box searchable" data-type="program" 
+      data-keywords="정책연구 정책 국정운영 시뮬레이션 성과기록 시트 활동지 유인물 한글 hwp pdf" data-password="1234">
+      <button class="accordion-btn" type="button">
+        <div class="accordion-left">
+          <h3>정책연구</h3>
+        </div>
+        <div class="accordion-right">
+          <div class="count-badge">2개</div>
+          <div class="accordion-icon">⌄</div>
+        </div>
+      </button>
+
+      <div class="accordion-panel">
+        <div class="resource-list">
+          <div class="resource-row">
+            <span class="type-badge type-site">SITE</span>
+            <div class="title-cell">
+              <div class="resource-title">국정 운영 시뮬레이션</div>
+            </div>
+            <div class="resource-desc">강사용</div>
+            <div class="actions">
+              <a class="btn open" href="https://able0220.github.io/policy/" target="_blank">새 탭 열기</a>
+              <button class="btn copy" data-copy="https://able0220.github.io/policy/">링크 복사</button>
+            </div>
+          </div>
+
+          <div class="resource-row">
+            <span class="type-badge type-file">FILE</span>
+            <div class="title-cell">
+              <div class="resource-title">국정운영 성과 기록 시트</div>
+            </div>
+            <div class="resource-desc">출력용</div>
+            <div class="actions">
+              <a class="btn primary" href="./files/Management/policy-research.pdf" target="_blank">출력</a>
+              <a class="btn" href="./files/Management/policy-research.hwp" download>다운로드</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+  </div>
+</section>
 
     <section class="section" data-group="zep">
       <div class="section-head">
