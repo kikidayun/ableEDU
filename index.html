@@ -547,6 +547,24 @@
     width:100%;
   }
 
+  .item-subtitle:first-of-type{
+    margin-top:0;
+  }
+
+  .item-subtitle{
+    margin:28px 0 10px;
+    padding-bottom:6px;
+    font-size:18px;
+    font-weight:800;
+    color:#1f2937;
+    border-bottom:2px solid #e5eaf3;
+  }
+
+
+  .item-subtitle + .resource-list{
+    margin-top:6px;
+  }
+
   .btn{
     height:36px;
     padding:0 13px;
@@ -798,13 +816,16 @@
 .section[data-group="program"] .resource-list{
   display:grid;
   grid-template-columns:repeat(2,minmax(0,1fr));
+  margin-bottom:4px;
   gap:6px;
 }
+
 
 .section[data-group="program"] .resource-row{
   display:flex;
   align-items:center;
   gap:16px;
+  margin-bottom:6px;
   padding:10px 14px;
   min-height:55px;
   border:1px solid var(--line);
@@ -986,23 +1007,23 @@
       <div class="accordion-group">
 
         <article class="program-box searchable" data-type="common" 
-        data-keywords="인공지능 머신러닝 AI 퀵드로우 오토드로우 티처블머신 모럴머신 엔트리 칸딘스키 스크루블리 해양 사진 진짜가짜 quickdraw autodraw teachable machine moral machine entry kandinsky scroobly ai for oceans which face is real">
+        data-keywords="프롬프트 디지털 리터러시 생성형AI 챗지피티 chatgpt 제미나이 gemini 뤼튼 wrtn 비주얼스튜디오코드 vscode 인공지능 머신러닝 AI 퀵드로우 오토드로우 티처블머신 모럴머신 엔트리 칸딘스키 스크루블리 해양 사진 진짜가짜 quickdraw autodraw teachable machine moral machine entry kandinsky scroobly ai for oceans which face is real">
           <button class="accordion-btn" type="button">
             <div class="accordion-left">
-              <h3>인공지능·머신러닝</h3>
+              <h3>💡 AI·인공지능·디지털</h3>
             </div>
             <div class="accordion-right">
-              <div class="count-badge">10개</div>
+              <div class="count-badge">3개</div>
               <div class="accordion-icon">⌄</div>
             </div>
           </button>
 
           <div class="accordion-panel">
+            <div class="item-subtitle">▶️ 머신러닝</div>
             <div class="quick-grid quick-grid-inside">
-
               <div class="quick-link">
                 <div class="icon"><img src="./icons/quickdraw.png" alt="퀵드로우"></div>
-                <h3>퀵드로우 <br><small style="font-size:12px; color:var(--gray);">(Quick Draw)</small></h3>
+                <h3>퀵드로우 <br><small style="font-size:12px; color:var(--gray);">인공지능·머신러닝</small></h3>
                 <div class="quick-link-bottom">
                   <div class="quick-actions">
                     <a class="btn primary" href="https://quickdraw.withgoogle.com/?locale=ko" target="_blank">열기</a>
@@ -1016,7 +1037,7 @@
 
               <div class="quick-link">
                 <div class="icon"><img src="./icons/autodraw.png" alt="오토드로우"></div>
-                <h3>오토드로우 <br><small style="font-size:12px; color:var(--gray);">(Auto Draw)</small></h3>
+                <h3>오토드로우 <br><small style="font-size:12px; color:var(--gray);">인공지능·머신러닝</small></h3>
                 <div class="quick-link-bottom">
                   <div class="quick-actions">
                     <a class="btn primary" href="https://www.autodraw.com/" target="_blank">열기</a>
@@ -1030,7 +1051,7 @@
 
               <div class="quick-link">
                 <div class="icon"><img src="./icons/teachablemachine.png" alt="티처블머신"></div>
-                <h3>티처블머신 <br><small style="font-size:12px; color:var(--gray);">(Teachable Machine)</small></h3>
+                <h3>티처블머신 <br><small style="font-size:12px; color:var(--gray);">머신러닝</small></h3>
                 <div class="quick-link-bottom">
                   <div class="quick-actions">
                     <a class="btn primary" href="https://teachablemachine.withgoogle.com/" target="_blank">열기</a>
@@ -1044,7 +1065,7 @@
 
               <div class="quick-link">
                 <div class="icon"><img src="./icons/moralmachine.png" alt="모럴머신"></div>
-                <h3>모럴머신 <br><small style="font-size:12px; color:var(--gray);">(moralmachine)</small></h3>
+                <h3>모럴머신 <br><small style="font-size:12px; color:var(--gray);">머신러닝</small></h3>
                 <div class="quick-link-bottom">
                   <div class="quick-actions">
                     <a class="btn primary" href="https://www.moralmachine.net/hl/kr" target="_blank">열기</a>
@@ -1058,7 +1079,7 @@
 
               <div class="quick-link">
                 <div class="icon"><img src="./icons/entry.png" alt="엔트리"></div>
-                <h3>엔트리 <br><small style="font-size:12px; color:var(--gray);">(Entry)</small></h3>
+                <h3>엔트리 <br><small style="font-size:12px; color:var(--gray);">인공지능 태블릿</small></h3>
                 <div class="quick-link-bottom">
                   <div class="quick-actions">
                     <a class="btn primary" href="https://playentry.org/" target="_blank">열기</a>
@@ -1072,21 +1093,49 @@
 
               <div class="quick-link">
                 <div class="icon"><img src="./icons/entry2.png" alt="엔트리"></div>
-                <h3>AI 운동·게임 실습 <br><small style="font-size:12px; color:var(--gray);">(Entry)</small></h3>
+                <h3>AI 운동·게임 실습 <br><small style="font-size:12px; color:var(--gray);">인공지능 초등</small></h3>
                 <div class="quick-link-bottom">
                   <div class="quick-actions">
                     <a class="btn primary" href="https://playentry.org/us?query=%EC%97%90%EC%9D%B4%EB%B8%94" target="_blank">열기</a>
                     <button class="btn copy" data-copy="https://playentry.org/us?query=%EC%97%90%EC%9D%B4%EB%B8%94">복사</button>
                   </div>
                   <div class="quick-qr-area">
-                    <button class="btn qr" data-qr-title="엔트리 실습" data-qr-url="https://playentry.org/us?query=%EC%97%90%EC%9D%B4%EB%B8%94">QR</button>
+                    <button class="btn qr" data-qr-title="에이블 엔트리 실습" data-qr-url="https://playentry.org/us?query=%EC%97%90%EC%9D%B4%EB%B8%94">QR</button>
                   </div>
                 </div>
               </div>
 
               <div class="quick-link">
+                <div class="icon"><img src="./icons/aiforoceans.png" alt="해양AI"></div>
+                <h3>해양분야를 위한 AI <br><small style="font-size:12px; color:var(--gray);">인공지능 초등</small></h3>
+                <div class="quick-link-bottom">
+                  <div class="quick-actions">
+                    <a class="btn primary" href="https://studio.code.org/courses/oceans/units/1/lessons/1/levels/1" target="_blank">열기</a>
+                    <button class="btn copy" data-copy="https://studio.code.org/courses/oceans/units/1/lessons/1/levels/1">복사</button>
+                  </div>
+                  <div class="quick-qr-area">
+                    <button class="btn qr" data-qr-title="AI for Oceans" data-qr-url="https://studio.code.org/courses/oceans/units/1/lessons/1/levels/1">QR</button>
+                  </div>
+                </div>
+              </div>
+              <div class="quick-link">
+                <div class="icon"><img src="./icons/faceisreal.png" alt="whichfaceisreal"></div>
+                <h3>사진 속 진짜 가짜 <br><small style="font-size:12px; color:var(--gray);">아이스 브레이킹</small></h3>
+                <div class="quick-link-bottom">
+                  <div class="quick-actions">
+                    <a class="btn primary" href="https://whichfaceisreal.com/" target="_blank">열기</a>
+                    <button class="btn copy" data-copy="https://whichfaceisreal.com/">복사</button>
+                  </div>
+                  <div class="quick-qr-area">
+                    <button class="btn qr" data-qr-title="whichfaceisreal" data-qr-url="https://whichfaceisreal.com/">QR</button>
+                  </div>
+                </div>
+              </div>
+
+
+              <div class="quick-link">
                 <div class="icon"><img src="./icons/kandinsky.png" alt="칸딘스키"></div>
-                <h3>칸딘스키 <br><small style="font-size:12px; color:var(--gray);">(Kandinsky)</small></h3>
+                <h3>칸딘스키 <br><small style="font-size:12px; color:var(--gray);">추가실습</small></h3>
                 <div class="quick-link-bottom">
                   <div class="quick-actions">
                     <a class="btn primary" href="https://musiclab.chromeexperiments.com/kandinsky/" target="_blank">열기</a>
@@ -1100,7 +1149,7 @@
 
               <div class="quick-link">
                 <div class="icon"><img src="./icons/scroobly.png" alt="스크루블리"></div>
-                <h3>스크루블리 <br><small style="font-size:12px; color:var(--gray);">(scroobly)</small></h3>
+                <h3>스크루블리 <br><small style="font-size:12px; color:var(--gray);">추가실습</small></h3>
                 <div class="quick-link-bottom">
                   <div class="quick-actions">
                     <a class="btn primary" href="https://www.scroobly.com/" target="_blank">열기</a>
@@ -1110,133 +1159,17 @@
                     <button class="btn qr" data-qr-title="스크루블리" data-qr-url="https://www.scroobly.com/">QR</button>
                   </div>
                 </div>
-              </div>
+              </div>    
 
-              <div class="quick-link">
-                <div class="icon"><img src="./icons/aiforoceans.png" alt="해양AI"></div>
-                <h3>해양분야를 위한 AI <br><small style="font-size:12px; color:var(--gray);">(AI for Oceans)</small></h3>
-                <div class="quick-link-bottom">
-                  <div class="quick-actions">
-                    <a class="btn primary" href="https://studio.code.org/courses/oceans/units/1/lessons/1/levels/1" target="_blank">열기</a>
-                    <button class="btn copy" data-copy="https://studio.code.org/courses/oceans/units/1/lessons/1/levels/1">복사</button>
-                  </div>
-                  <div class="quick-qr-area">
-                    <button class="btn qr" data-qr-title="AI for Oceans" data-qr-url="https://studio.code.org/courses/oceans/units/1/lessons/1/levels/1">QR</button>
-                  </div>
-                </div>
-              </div>
-
-              <div class="quick-link">
-                <div class="icon"><img src="./icons/faceisreal.png" alt="whichfaceisreal"></div>
-                <h3>사진 속 진짜 가짜 <br><small style="font-size:12px; color:var(--gray);">(Which Face Is Real?)</small></h3>
-                <div class="quick-link-bottom">
-                  <div class="quick-actions">
-                    <a class="btn primary" href="https://whichfaceisreal.com/" target="_blank">열기</a>
-                    <button class="btn copy" data-copy="https://whichfaceisreal.com/">복사</button>
-                  </div>
-                  <div class="quick-qr-area">
-                    <button class="btn qr" data-qr-title="whichfaceisreal" data-qr-url="https://whichfaceisreal.com/">QR</button>
-                  </div>
-                </div>
-              </div>
-
+              
             </div>
-          </div>
-        </article>
 
-        <article class="program-box searchable" data-type="common" 
-        data-keywords="의공학 바이오 생명과학 빅데이터 코랩 구글코랩 아두이노 깃허브 github colab arduino">
-          <button class="accordion-btn" type="button">
-            <div class="accordion-left">
-              <h3>의공학·똑똑한 상상이룸·빅데이터</h3>
-            </div>
-            <div class="accordion-right">
-              <div class="count-badge">3개</div>
-              <div class="accordion-icon">⌄</div>
-            </div>
-          </button>
-
-          <div class="accordion-panel">
+            <div class="item-subtitle">▶️ 프롬프트·리터러시</div>
             <div class="quick-grid quick-grid-inside">
 
               <div class="quick-link">
-                <div class="icon"><img src="./icons/Arduino.png" alt="아두이노"></div>
-                <h3>아두이노 <br><small style="font-size:12px; color:var(--gray);">(arduino)</small></h3>
-                <div class="quick-link-bottom">
-                  <div class="quick-actions">
-                    <a class="btn primary" href="https://www.arduino.cc/en/software/" target="_blank">열기</a>
-                    <button class="btn copy" data-copy="https://www.arduino.cc/en/software/">복사</button>
-                  </div>
-                  <div class="quick-qr-area">
-                    <button class="btn qr" data-qr-title="아두이노" data-qr-url="https://www.arduino.cc/en/software/">QR</button>
-                  </div>
-                </div>
-              </div>
-
-              <div class="quick-link">
-                <div class="icon"><img src="./icons/googlecolab.png" alt="구글 코랩"></div>
-                <h3>구글 코랩 <br><small style="font-size:12px; color:var(--gray);">(Colab)</small></h3>
-                <div class="quick-link-bottom">
-                  <div class="quick-actions">
-                    <a class="btn primary" href="https://colab.research.google.com/?hl=ko" target="_blank">열기</a>
-                    <button class="btn copy" data-copy="https://colab.research.google.com/?hl=ko">복사</button>
-                  </div>
-                  <div class="quick-qr-area">
-                    <button class="btn qr" data-qr-title="구글 코랩" data-qr-url="https://colab.research.google.com/?hl=ko">QR</button>
-                  </div>
-                </div>
-              </div>
-
-              <div class="quick-link">
-                 <div class="icon"><img src="./icons/github.png" alt="깃허브"></div>
-                <h3>에이블 깃허브 <br><small style="font-size:12px; color:var(--gray);">(ABLE github)</small></h3>
-                <div class="quick-link-bottom">
-                  <div class="quick-actions">
-                    <a class="btn primary" href="https://github.com/able0220/able0220" target="_blank">열기</a>
-                    <button class="btn copy" data-copy="https://github.com/able0220/able0220">복사</button>
-                  </div>
-                  <div class="quick-qr-area">
-                    <button class="btn qr" data-qr-title="에이블 깃허브" data-qr-url="https://github.com/able0220/able0220">QR</button>
-                  </div>
-                </div>
-              </div>
-
-              <div class="quick-link">
-                 <div class="icon"><img src="./icons/mentimeter.png" alt="멘티미터"></div>
-                <h3>멘티미터 <br><small style="font-size:12px; color:var(--gray);">(mentimeter)</small></h3>
-                <div class="quick-link-bottom">
-                  <div class="quick-actions">
-                    <a class="btn primary" href="https://www.mentimeter.com/" target="_blank">열기</a>
-                    <button class="btn copy" data-copy="https://www.mentimeter.com/">복사</button>
-                  </div>
-                  <div class="quick-qr-area">
-                    <button class="btn qr" data-qr-title="멘티미터" data-qr-url="https://www.mentimeter.com/">QR</button>
-                  </div>
-                </div>
-              </div>
-
-            </div>
-          </div>
-        </article>
-
-        <article class="program-box searchable" data-type="common" 
-        data-keywords="프롬프트 디지털 리터러시 생성형AI 챗지피티 chatgpt 제미나이 gemini 뤼튼 wrtn 비주얼스튜디오코드 vscode">
-          <button class="accordion-btn" type="button">
-            <div class="accordion-left">
-              <h3>프롬프트·디지털 리터러시</h3>
-            </div>
-            <div class="accordion-right">
-              <div class="count-badge">4개</div>
-              <div class="accordion-icon">⌄</div>
-            </div>
-          </button>
-
-          <div class="accordion-panel">
-            <div class="quick-grid quick-grid-inside">
-
-              <div class="quick-link">
-                <div class="icon"><img src="./icons/vscode.png" alt="비주얼스튜디오코드"></div>
-                <h3>비주얼스튜디오코드 <br><small style="font-size:12px; color:var(--gray);">(VS Code)</small></h3>
+                <div class="icon"><img src="./icons/vscode.png" alt="VS 코드"></div>
+                <h3>VS 코드 <br><small style="font-size:12px; color:var(--gray);">프롬프트·게임 기획</small></h3>
                 <div class="quick-link-bottom">
                   <div class="quick-actions">
                     <a class="btn primary" href="https://code.visualstudio.com/" target="_blank">열기</a>
@@ -1250,7 +1183,7 @@
 
               <div class="quick-link">
                 <div class="icon"><img src="./icons/gpt.png" alt="chatGPT"></div>
-                <h3>챗 지피티 <br><small style="font-size:12px; color:var(--gray);">(chatGPT)</small></h3>
+                <h3>챗 지피티 <br><small style="font-size:12px; color:var(--gray);">생성형 AI</small></h3>
                 <div class="quick-link-bottom">
                   <div class="quick-actions">
                     <a class="btn primary" href="https://chatgpt.com/openaicom" target="_blank">열기</a>
@@ -1264,7 +1197,7 @@
 
               <div class="quick-link">
                 <div class="icon"><img src="./icons/gemini.png" alt="gemini"></div>
-                <h3>제미나이 <br><small style="font-size:12px; color:var(--gray);">(Gemini)</small></h3>
+                <h3>제미나이 <br><small style="font-size:12px; color:var(--gray);">생성형 AI</small></h3>
                 <div class="quick-link-bottom">
                   <div class="quick-actions">
                     <a class="btn primary" href="https://gemini.google.com/?hl=ko" target="_blank">열기</a>
@@ -1278,7 +1211,7 @@
 
               <div class="quick-link">
                 <div class="icon"><img src="./icons/wrtn.png" alt="뤼튼"></div>
-                <h3>뤼튼 <br><small style="font-size:12px; color:var(--gray);">(wrtn)</small></h3>
+                <h3>뤼튼 <br><small style="font-size:12px; color:var(--gray);">생성형 AI</small></h3>
                 <div class="quick-link-bottom">
                   <div class="quick-actions">
                     <a class="btn primary" href="https://wrtn.ai/" target="_blank">열기</a>
@@ -1291,14 +1224,90 @@
               </div>
 
             </div>
+
+
+            <div class="item-subtitle">▶️ 빅데이터</div>
+            <div class="quick-grid quick-grid-inside">
+
+              <div class="quick-link">
+                 <div class="icon"><img src="./icons/github.png" alt="깃허브"></div>
+                <h3>에이블 깃허브 <br><small style="font-size:12px; color:var(--gray);">에이블 깃허브 자료</small></h3>
+                <div class="quick-link-bottom">
+                  <div class="quick-actions">
+                    <a class="btn primary" href="https://github.com/able0220/able0220" target="_blank">열기</a>
+                    <button class="btn copy" data-copy="https://github.com/able0220/able0220">복사</button>
+                  </div>
+                  <div class="quick-qr-area">
+                    <button class="btn qr" data-qr-title="에이블 깃허브" data-qr-url="https://github.com/able0220/able0220">QR</button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="quick-link">
+                <div class="icon"><img src="./icons/googlecolab.png" alt="구글 코랩"></div>
+                <h3>구글 코랩 <br><small style="font-size:12px; color:var(--gray);">딥러닝·빅분·RSA·바이오</small></h3>
+                <div class="quick-link-bottom">
+                  <div class="quick-actions">
+                    <a class="btn primary" href="https://colab.research.google.com/?hl=ko" target="_blank">열기</a>
+                    <button class="btn copy" data-copy="https://colab.research.google.com/?hl=ko">복사</button>
+                  </div>
+                  <div class="quick-qr-area">
+                    <button class="btn qr" data-qr-title="구글 코랩" data-qr-url="https://colab.research.google.com/?hl=ko">QR</button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="quick-link">
+                 <div class="icon"><img src="./icons/mentimeter.png" alt="멘티미터"></div>
+                <h3>멘티미터 <br><small style="font-size:12px; color:var(--gray);">빅데이터 경제</small></h3>
+                <div class="quick-link-bottom">
+                  <div class="quick-actions">
+                    <a class="btn primary" href="https://www.mentimeter.com/" target="_blank">열기</a>
+                    <button class="btn copy" data-copy="https://www.mentimeter.com/">복사</button>
+                  </div>
+                  <div class="quick-qr-area">
+                    <button class="btn qr" data-qr-title="멘티미터" data-qr-url="https://www.mentimeter.com/">QR</button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="quick-link">
+                 <div class="icon"><img src="./icons/wordcloud.png" alt="워드클라우드"></div>
+                <h3>워드클라우드 <br><small style="font-size:12px; color:var(--gray);">빅데이터 경제 추가실습</small></h3>
+                <div class="quick-link-bottom">
+                  <div class="quick-actions">
+                    <a class="btn primary" href="https://wordcloud.kr/v2/index.php" target="_blank">열기</a>
+                    <button class="btn copy" data-copy="https://wordcloud.kr/v2/index.php">복사</button>
+                  </div>
+                  <div class="quick-qr-area">
+                    <button class="btn qr" data-qr-title="워드클라우드" data-qr-url="https://wordcloud.kr/v2/index.php">QR</button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="quick-link">
+                 <div class="icon"><img src="./icons/10sec.png" alt="10초 맞추기"></div>
+                <h3>10초 맞추기 <br><small style="font-size:12px; color:var(--gray);">아이스 브레이킹</small></h3>
+                <div class="quick-link-bottom">
+                  <div class="quick-actions">
+                    <a class="btn primary" href="https://testmoa.com/10sec/" target="_blank">열기</a>
+                    <button class="btn copy" data-copy="https://testmoa.com/10sec/">복사</button>
+                  </div>
+                  <div class="quick-qr-area">
+                    <button class="btn qr" data-qr-title="10초 맞추기" data-qr-url="https://testmoa.com/10sec/">QR</button>
+                  </div>
+                </div>
+              </div>
+
+            </div>
           </div>
         </article>
 
         <article class="program-box searchable" data-type="common" 
-        data-keywords="VR 메타버스 앱개발 앱 인벤터 앱인벤터 app inventor 딜라이텍스 delightex">
+        data-keywords="메이커 디자인 시각디자인 AI캐릭터 캔바 canva 미리캔버스 miricanvas 팅커캐드 tinkercad animated drawings VR 메타버스 앱개발 앱 인벤터 앱인벤터 app inventor 딜라이텍스 delightex 의공학 바이오 생명과학 빅데이터 코랩 구글코랩 아두이노 깃허브 github colab arduino">
           <button class="accordion-btn" type="button">
             <div class="accordion-left">
-              <h3>VR·앱 개발</h3>
+              <h3>📄 콘텐츠·메이커·디자인</h3>
             </div>
             <div class="accordion-right">
               <div class="count-badge">2개</div>
@@ -1307,11 +1316,40 @@
           </button>
 
           <div class="accordion-panel">
+          <div class="item-subtitle">▶️ 아두이노·콘텐츠</div>
             <div class="quick-grid quick-grid-inside">
 
               <div class="quick-link">
+                <div class="icon"><img src="./icons/Arduino.png" alt="아두이노"></div>
+                <h3>아두이노 <br><small style="font-size:12px; color:var(--gray);">의공학·똑상·메이커</small></h3>
+                <div class="quick-link-bottom">
+                  <div class="quick-actions">
+                    <a class="btn primary" href="https://www.arduino.cc/en/software/" target="_blank">열기</a>
+                    <button class="btn copy" data-copy="https://www.arduino.cc/en/software/">복사</button>
+                  </div>
+                  <div class="quick-qr-area">
+                    <button class="btn qr" data-qr-title="아두이노" data-qr-url="https://www.arduino.cc/en/software/">QR</button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="quick-link">
+                <div class="icon"><img src="./icons/tvshowgame.png" alt="예능 게임"></div>
+                <h3>예능 게임 <br><small style="font-size:12px; color:var(--gray);">콘텐츠 기획 추가실습</small></h3>
+                <div class="quick-link-bottom">
+                  <div class="quick-actions">
+                    <a class="btn primary" href="https://tvshowgame.pages.dev/" target="_blank">열기</a>
+                    <button class="btn copy" data-copy="https://tvshowgame.pages.dev/">복사</button>
+                  </div>
+                  <div class="quick-qr-area">
+                    <button class="btn qr" data-qr-title="예능 게임" data-qr-url="https://tvshowgame.pages.dev/">QR</button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="quick-link">
                 <div class="icon"><img src="./icons/delightexedu.png" alt="딜라이텍스"></div>
-                <h3>딜라이텍스 에듀 <br><small style="font-size:12px; color:var(--gray);">(Delightex EDU)</small></h3>
+                <h3>딜라이텍스 에듀 <br><small style="font-size:12px; color:var(--gray);">VR·AR</small></h3>
                 <div class="quick-link-bottom">
                   <div class="quick-actions">
                     <a class="btn primary" href="https://www.delightex.com/edu" target="_blank">열기</a>
@@ -1323,9 +1361,10 @@
                 </div>
               </div>
 
+
               <div class="quick-link">
                 <div class="icon"><img src="./icons/appinventor.png" alt="앱인벤터"></div>
-                <h3>앱 인벤터 <br><small style="font-size:12px; color:var(--gray);">(App Inventor)</small></h3>
+                <h3>앱 인벤터 <br><small style="font-size:12px; color:var(--gray);">앱 개발·앱 디자인</small></h3>
                 <div class="quick-link-bottom">
                   <div class="quick-actions">
                     <a class="btn primary" href="https://login.appinventor.mit.edu/codelogin" target="_blank">열기</a>
@@ -1337,27 +1376,13 @@
                 </div>
               </div>
             </div>
-          </div>
-        </article>
 
-        <article class="program-box searchable" data-type="common" 
-        data-keywords="메이커 디자인 시각디자인 AI캐릭터 캔바 canva 미리캔버스 miricanvas 팅커캐드 tinkercad animated drawings">
-          <button class="accordion-btn" type="button">
-            <div class="accordion-left">
-              <h3>메이커·디자인</h3>
-            </div>
-            <div class="accordion-right">
-              <div class="count-badge">4개</div>
-              <div class="accordion-icon">⌄</div>
-            </div>
-          </button>
-
-          <div class="accordion-panel">
+          <div class="item-subtitle">▶️ 디자인·메이커</div>
             <div class="quick-grid quick-grid-inside">
 
               <div class="quick-link">
                 <div class="icon"><img src="./icons/AnimatedDrawings.png" alt="AI 캐릭터"></div>
-                <h3>AI 캐릭터 <br><small style="font-size:12px; color:var(--gray);">(Animated Drawings)</small></h3>
+                <h3>AI 캐릭터 <br><small style="font-size:12px; color:var(--gray);">시각디자인</small></h3>
                 <div class="quick-link-bottom">
                   <div class="quick-actions">
                     <a class="btn primary" href="https://sketch.metademolab.com/" target="_blank">열기</a>
@@ -1371,7 +1396,7 @@
 
               <div class="quick-link">
                 <div class="icon"><img src="./icons/canva.png" alt="캔바"></div>
-                <h3>캔바 <br><small style="font-size:12px; color:var(--gray);">(Canva)</small></h3>
+                <h3>캔바 <br><small style="font-size:12px; color:var(--gray);">시각디자인</small></h3>
                 <div class="quick-link-bottom">
                   <div class="quick-actions">
                     <a class="btn primary" href="https://www.canva.com/ai" target="_blank">열기</a>
@@ -1385,7 +1410,7 @@
 
               <div class="quick-link">
                  <div class="icon"><img src="./icons/miricanvas.png" alt="미리캔버스"></div>
-                <h3>미리캔버스 <br><small style="font-size:12px; color:var(--gray);">(Miricanvas)</small></h3>
+                <h3>미리캔버스 <br><small style="font-size:12px; color:var(--gray);">인포메이션 디자인</small></h3>
                 <div class="quick-link-bottom">
                   <div class="quick-actions">
                     <a class="btn primary" href="https://www.miricanvas.com/ko" target="_blank">열기</a>
@@ -1399,7 +1424,7 @@
 
               <div class="quick-link">
                 <div class="icon"><img src="./icons/tinkercad.png" alt="팅커캐드"></div>
-                <h3>팅커캐드 <br><small style="font-size:12px; color:var(--gray);">(tinkercad)</small></h3>
+                <h3>팅커캐드 <br><small style="font-size:12px; color:var(--gray);">3D설계 모델링</small></h3>
                 <div class="quick-link-bottom">
                   <div class="quick-actions">
                     <a class="btn primary" href="https://www.tinkercad.com/circuits" target="_blank">열기</a>
@@ -1409,9 +1434,13 @@
                     <button class="btn qr" data-qr-title="팅커캐드" data-qr-url="https://www.tinkercad.com/circuits">QR</button>
                   </div>
                 </div>
-              </div>
             </div>
+
+            </div>
+
+
           </div>
+          
         </article>
 
       </div>
@@ -1426,18 +1455,22 @@
   <div class="accordion-group">
 
     <article class="program-box searchable" data-type="program" 
-      data-keywords="디지털 리터러시 초등 중·고등 카피라이터 실습 엑셀 xlsx 유인물 hwp pdf" data-password="1234">
+      data-keywords="디지털 리터러시 초등 중·고등 카피라이터 실습 빅데이터 경제 주식 투자 시뮬레이션 빅데이터 분석 데이터분석 상권분석 차량추천 자동차추천 cars data 엑셀 xlsx 유인물 hwp pdf" data-password="1234">
       <button class="accordion-btn" type="button">
         <div class="accordion-left">
-          <h3>디지털 리터러시</h3>
+          <h3>💻 디지털</h3>
         </div>
         <div class="accordion-right">
-          <div class="count-badge">2개</div>
+          <div class="count-badge">4개</div>
           <div class="accordion-icon">⌄</div>
         </div>
       </button>
 
+
+      
       <div class="accordion-panel">
+
+        <div class="item-subtitle">1️⃣ 디지털 리터러시</div>
         <div class="resource-list">
           <div class="resource-row">
             <span class="type-badge type-file">FILE</span>
@@ -1462,23 +1495,10 @@
               <a class="btn" href="./files/bigdata/digital-literacy-high.hwp" download>다운로드</a>
             </div>
           </div>
-        </div>
-      </div>
-    </article>
+          </div>
 
-    <article class="program-box searchable" data-type="program" 
-      data-keywords="빅데이터 경제 주식 투자 시뮬레이션 유인물 활동지 한글 hwp pdf" data-password="1234">
-      <button class="accordion-btn" type="button">
-        <div class="accordion-left">
-          <h3>빅데이터 경제</h3>
-        </div>
-        <div class="accordion-right">
-          <div class="count-badge">2개</div>
-          <div class="accordion-icon">⌄</div>
-        </div>
-      </button>
 
-      <div class="accordion-panel">
+        <div class="item-subtitle">2️⃣ 빅데이터 경제</div>
         <div class="resource-list">
           <div class="resource-row">
             <span class="type-badge type-site">SITE</span>
@@ -1487,7 +1507,7 @@
             </div>
             <div class="resource-desc">강사용</div>
             <div class="actions">
-              <a class="btn open" href="https://able0220.github.io/stockgame-A/" target="_blank">새 탭 열기</a>
+              <a class="btn open" href="https://able0220.github.io/stockgame-A/" target="_blank">열기</a>
               <button class="btn copy" data-copy="https://able0220.github.io/stockgame-A/">링크 복사</button>
             </div>
           </div>
@@ -1503,36 +1523,11 @@
               <a class="btn" href="./files/bigdata/bigdata-stockgame-A.hwp" download="빅데이터 경제 학생 유인물.hwp">다운로드</a>
             </div>
           </div>
-        </div>
-      </div>
-    </article>
-
-    <article class="program-box searchable" data-type="program" 
-      data-keywords="빅데이터 분석 데이터분석 상권분석 차량추천 자동차추천 cars data 엑셀 xlsx 유인물 hwp pdf" data-password="1234">
-      <button class="accordion-btn" type="button">
-        <div class="accordion-left">
-          <h3>빅데이터 분석</h3>
-        </div>
-        <div class="accordion-right">
-          <div class="count-badge">3개</div>
-          <div class="accordion-icon">⌄</div>
-        </div>
-      </button>
-
-      <div class="accordion-panel">
-        <div class="resource-list">
-          <div class="resource-row">
-            <span class="type-badge type-site">SITE</span>
-            <div class="title-cell">
-              <div class="resource-title">상권 분석 사이트</div>
-            </div>
-            <div class="resource-desc">공유용 (패들렛)</div>
-            <div class="actions">
-              <a class="btn open" href="https://able0220.github.io/localbiz/" target="_blank">새 탭 열기</a>
-              <button class="btn copy" data-copy="https://able0220.github.io/localbiz/">링크 복사</button>
-            </div>
           </div>
 
+
+        <div class="item-subtitle">3️⃣ 빅데이터 분석</div>
+        <div class="resource-list">
           <div class="resource-row">
             <span class="type-badge type-file">FILE</span>
             <div class="title-cell">
@@ -1556,22 +1551,38 @@
             </div>
           </div>
         </div>
+
+          
+        <div class="item-subtitle">4️⃣ 빅데이터 상권분석</div>
+          <div class="resource-row">
+             <span class="type-badge type-site">SITE</span>
+            <div class="title-cell">
+              <div class="resource-title">상권 분석 사이트</div>
+            </div>
+            <div class="resource-desc">공유용 (패들렛)</div>
+            <div class="actions">
+              <a class="btn open" href="https://able0220.github.io/localbiz/" target="_blank">열기</a>
+              <button class="btn copy" data-copy="https://able0220.github.io/localbiz/">링크 복사</button>
+            </div>
+          </div>
+
       </div>
     </article>
 
     <article class="program-box searchable" data-type="program" 
-      data-keywords="콘텐츠 기획 스피드퀴즈 퀴즈 카테고리형 기획안 유인물 한글 hwp pdf" data-password="1234">
+      data-keywords="콘텐츠 기획 스피드퀴즈 퀴즈 카테고리형 기획안 유인물 한글 hwp pdf 광고 광고기획 크리에이티브 광고기획 광고기획안 스토리 기획 세계관 미니실습 스토리기획자" data-password="1234">
       <button class="accordion-btn" type="button">
         <div class="accordion-left">
-          <h3>콘텐츠 기획</h3>
+          <h3>🎮 콘텐츠</h3>
         </div>
         <div class="accordion-right">
-          <div class="count-badge">4개</div>
+          <div class="count-badge">3개</div>
           <div class="accordion-icon">⌄</div>
         </div>
       </button>
 
       <div class="accordion-panel">
+        <div class="item-subtitle">1️⃣ 콘텐츠 기획</div>
         <div class="resource-list">
           <div class="resource-row">
             <span class="type-badge type-site">SITE</span>
@@ -1580,7 +1591,7 @@
             </div>
             <div class="resource-desc">강사용 (문제)</div>
             <div class="actions">
-              <a class="btn open" href="https://able0220.github.io/quiz1/" target="_blank">새 탭 열기</a>
+              <a class="btn open" href="https://able0220.github.io/quiz1/" target="_blank">열기</a>
               <button class="btn copy" data-copy="https://able0220.github.io/quiz1/">링크 복사</button>
             </div>
           </div>
@@ -1592,7 +1603,7 @@
             </div>
             <div class="resource-desc">강사용 (카테고리)</div>
             <div class="actions">
-              <a class="btn open" href="https://able0220.github.io/quiz2/" target="_blank">새 탭 열기</a>
+              <a class="btn open" href="https://able0220.github.io/quiz2/" target="_blank">열기</a>
               <button class="btn copy" data-copy="https://able0220.github.io/quiz2/">링크 복사</button>
             </div>
           </div>
@@ -1604,7 +1615,7 @@
             </div>
             <div class="resource-desc">공유용 (패들렛)</div>
             <div class="actions">
-              <a class="btn open" href="https://able0220.github.io/content-plan/" target="_blank">새 탭 열기</a>
+              <a class="btn open" href="https://able0220.github.io/content-plan/" target="_blank">열기</a>
               <button class="btn copy" data-copy="https://able0220.github.io/content-plan/">링크 복사</button>
             </div>
           </div>
@@ -1621,23 +1632,8 @@
             </div>
           </div>
         </div>
-      </div>
-    </article>
-
-    <article class="program-box searchable" data-type="program" 
-      data-keywords="광고 광고기획 크리에이티브 광고기획 광고기획안 유인물 pdf" data-password="1234">
-      <button class="accordion-btn" type="button">
-        <div class="accordion-left">
-          <h3>크리에이티브 광고 기획</h3>
-        </div>
-        <div class="accordion-right">
-          <div class="count-badge">1개</div>
-          <div class="accordion-icon">⌄</div>
-        </div>
-      </button>
-
-      <div class="accordion-panel">
-        <div class="resource-list">
+          
+        <div class="item-subtitle">2️⃣ 크리에이티브 광고 기획</div>
           <div class="resource-row">
             <span class="type-badge type-file">FILE</span>
             <div class="title-cell">
@@ -1649,23 +1645,8 @@
               <a class="btn" href="./files/content/creative-ad-planning.hwp" download>다운로드</a>
             </div>
           </div>
-        </div>
-      </div>
-    </article>
 
-    <article class="program-box searchable" data-type="program" 
-      data-keywords="스토리 기획 세계관 미니실습 스토리기획자 유인물 pdf" data-password="1234">
-      <button class="accordion-btn" type="button">
-        <div class="accordion-left">
-          <h3>스토리 기획</h3>
-        </div>
-        <div class="accordion-right">
-          <div class="count-badge">2개</div>
-          <div class="accordion-icon">⌄</div>
-        </div>
-      </button>
-
-      <div class="accordion-panel">
+      <div class="item-subtitle">3️⃣ 스토리 기획</div>
         <div class="resource-list">
           <div class="resource-row">
             <span class="type-badge type-file">FILE</span>
@@ -1691,22 +1672,27 @@
             </div>
           </div>
         </div>
+
       </div>
     </article>
 
+
     <article class="program-box searchable" data-type="program" 
-      data-keywords="앱개발 앱디자인 앱 인벤터 앱인벤터 aia randomgame touchgame" data-password="1234">
+      data-keywords="로고디자인 인포메이션 디자인 UX·UI design 기업별 Quiver 유인물 PDF HWP" data-password="1234">
       <button class="accordion-btn" type="button">
         <div class="accordion-left">
-          <h3>앱 개발·앱 디자인</h3>
+          <h3>🎨 메이커·피지컬 컴퓨팅</h3>
         </div>
         <div class="accordion-right">
-          <div class="count-badge">4개</div>
+          <div class="count-badge">5개</div>
           <div class="accordion-icon">⌄</div>
         </div>
       </button>
 
+      
       <div class="accordion-panel">
+
+        <div class="item-subtitle">1️⃣ 앱 개발·앱 디자인</div>
         <div class="resource-list">
           <div class="resource-row">
             <span class="type-badge type-file">FILE</span>
@@ -1752,27 +1738,14 @@
             </div>
           </div>
         </div>
-      </div>
-    </article>
 
-    <article class="program-box searchable" data-type="program" 
-      data-keywords="로고디자인 인포메이션 디자인 UX·UI design 기업별 Quiver 유인물 PDF HWP" data-password="1234">
-      <button class="accordion-btn" type="button">
-        <div class="accordion-left">
-          <h3>시각디자인·로고 디자인·인포메이션</h3>
-        </div>
-        <div class="accordion-right">
-          <div class="count-badge">5개</div>
-          <div class="accordion-icon">⌄</div>
-        </div>
-      </button>
 
-      <div class="accordion-panel">
+        <div class="item-subtitle">2️⃣ 시각디자인</div>
         <div class="resource-list">
-          <div class="resource-row">
+        <div class="resource-row">
             <span class="type-badge type-pdf">PDF</span>
             <div class="title-cell">
-              <div class="resource-title">시각디자인 Quiver: Murphy(양)</div>
+              <div class="resource-title">Quiver: Murphy(양)</div>
             </div>
             <div class="resource-desc">출력용 (개인)</div>
             <div class="actions">
@@ -1784,7 +1757,7 @@
           <div class="resource-row">
             <span class="type-badge type-pdf">PDF</span>
             <div class="title-cell">
-              <div class="resource-title">시각디자인 Quiver: Penfold(펭귄)</div>
+              <div class="resource-title">Quiver: Penfold(펭귄)</div>
             </div>
             <div class="resource-desc">출력용 (개인)</div>
             <div class="actions">
@@ -1792,11 +1765,12 @@
               <a class="btn" href="./files/design/quiver-Penfold.pdf" download>다운로드</a>
             </div>
           </div>
+          </div>
 
           <div class="resource-row">
             <span class="type-badge type-pdf">PDF</span>
             <div class="title-cell">
-              <div class="resource-title">시각디자인 Quiver: Ruby(토끼)</div>
+              <div class="resource-title">Quiver: Ruby(토끼)</div>
             </div>
             <div class="resource-desc">출력용 (개인)</div>
             <div class="actions">
@@ -1804,11 +1778,13 @@
               <a class="btn" href="./files/design/quiver-Ruby.pdf" download>다운로드</a>
             </div>
           </div>
+        
 
+        <div class="item-subtitle">3️⃣ 로고 디자인</div>
           <div class="resource-row">
             <span class="type-badge type-file">FILE</span>
             <div class="title-cell">
-              <div class="resource-title">로고 디자인 기업별 유인물</div>
+              <div class="resource-title">기업별 유인물</div>
             </div>
             <div class="resource-desc">출력용 (예비)</div>
             <div class="actions">
@@ -1817,10 +1793,12 @@
             </div>
           </div>
 
+        <div class="item-subtitle">4️⃣ 인포메이션 디자인</div>
+        <div class="resource-list">
           <div class="resource-row">
             <span class="type-badge type-file">FILE</span>
             <div class="title-cell">
-              <div class="resource-title">인포메이션 디자인 UX·UI 분석</div>
+              <div class="resource-title">UX·UI 분석</div>
             </div>
             <div class="resource-desc">출력용 (2인1조)</div>
             <div class="actions">
@@ -1828,24 +1806,54 @@
               <a class="btn" href="./files/design/information-design-uxui.hwp" download>다운로드</a>
             </div>
           </div>
+
+          <div class="resource-row">
+            <span class="type-badge type-file">FILE</span>
+            <div class="title-cell">
+              <div class="resource-title">민주시민 공공서비스 UX·UI 분석</div>
+            </div>
+            <div class="resource-desc">출력용 (2인1조)</div>
+            <div class="actions">
+              <a class="btn primary" href="./files/design/democratic-design-uxui.pdf" target="_blank">출력</a>
+              <a class="btn" href="./files/design/democratic-design-uxui.hwp" download>다운로드</a>
+            </div>
+          </div>
         </div>
+      
+
+        <div class="item-subtitle">5️⃣ 디지털 헬스</div>
+          <div class="resource-row">
+            <span class="type-badge type-file">FILE</span>
+            <div class="title-cell">
+              <div class="resource-title">디지털 헬스 자가진단 유인물</div>
+            </div>
+            <div class="resource-desc">출력용 (개별)</div>
+            <div class="actions">
+              <a class="btn primary" href="./files/content/digital-healthcare.pdf" target="_blank">출력</a>
+              <a class="btn" href="./files/content/digital-healthcare.hwp" download>다운로드</a>
+            </div>
+          </div>
+
+
       </div>
     </article>
 
     <article class="program-box searchable" data-type="program" 
-      data-keywords="스타트업 설계 창업 창업계획 창업계획서 사업계획 사이트 유인물 한글 hwp pdf" data-password="1234">
+      data-keywords="스타트업 설계 창업 창업계획 창업계획서 사업계획 사이트 IMC 통합 마케팅 커뮤니케이션 유인물 경제전략 경매게임 경제 게임 정책연구 정책 국정운영 시뮬레이션 성과기록 시트 활동지 유인물 한글 hwp pdf" data-password="1234">
       <button class="accordion-btn" type="button">
         <div class="accordion-left">
-          <h3>스타트업 설계</h3>
+          <h3>🛞 경영</h3>
         </div>
         <div class="accordion-right">
-          <div class="count-badge">1개</div>
+          <div class="count-badge">4개</div>
           <div class="accordion-icon">⌄</div>
         </div>
       </button>
 
+      
       <div class="accordion-panel">
-        <div class="resource-list">
+
+        <div class="item-subtitle">1️⃣ 스타트업 설계</div>
           <div class="resource-row">
             <span class="type-badge type-site">SITE</span>
             <div class="title-cell">
@@ -1853,32 +1861,18 @@
             </div>
             <div class="resource-desc">공유용 (패들렛)</div>
             <div class="actions">
-              <a class="btn open" href="https://able0220.github.io/startup-plan/" target="_blank">새 탭 열기</a>
+              <a class="btn open" href="https://able0220.github.io/startup-plan/" target="_blank">열기</a>
               <button class="btn copy" data-copy="https://able0220.github.io/startup-plan/">링크 복사</button>
             </div>
           </div>
-        </div>
-      </div>
-    </article>
 
-    <article class="program-box searchable" data-type="program" 
-      data-keywords="IMC 통합 마케팅 커뮤니케이션 유인물 한글 hwp pdf" data-password="1234">
-      <button class="accordion-btn" type="button">
-        <div class="accordion-left">
-          <h3>IMC (통합 마케팅 커뮤니케이션)</h3>
-        </div>
-        <div class="accordion-right">
-          <div class="count-badge">2개</div>
-          <div class="accordion-icon">⌄</div>
-        </div>
-      </button>
 
-      <div class="accordion-panel">
+        <div class="item-subtitle">2️⃣ IMC (통합 마케팅 커뮤니케이션)</div>
         <div class="resource-list">
           <div class="resource-row">
             <span class="type-badge type-pdf">PDF</span>
             <div class="title-cell">
-              <div class="resource-title">MC 상세표</div>
+              <div class="resource-title">IMC 상세표</div>
             </div>
             <div class="resource-desc">강사용</div>
             <div class="actions">
@@ -1898,23 +1892,9 @@
             </div>
           </div>
         </div>
-      </div>
-    </article>
 
-    <article class="program-box searchable" data-type="program" 
-      data-keywords="경제전략 경매게임 경제 게임 활동지 유인물 한글 hwp pdf" data-password="1234">
-      <button class="accordion-btn" type="button">
-        <div class="accordion-left">
-          <h3>경제전략</h3>
-        </div>
-        <div class="accordion-right">
-          <div class="count-badge">3개</div>
-          <div class="accordion-icon">⌄</div>
-        </div>
-      </button>
-
-      <div class="accordion-panel">
-        <div class="resource-list">
+        <div class="item-subtitle">3️⃣ 경제전략</div>
+          <div class="resource-list">
           <div class="resource-row">
             <span class="type-badge type-site">SITE</span>
             <div class="title-cell">
@@ -1922,7 +1902,7 @@
             </div>
             <div class="resource-desc">강사용</div>
             <div class="actions">
-              <a class="btn open" href="https://able0220.github.io/auction1/" target="_blank">새 탭 열기</a>
+              <a class="btn open" href="https://able0220.github.io/auction1/" target="_blank">열기</a>
               <button class="btn copy" data-copy="https://able0220.github.io/auction1/">링크 복사</button>
             </div>
           </div>
@@ -1934,9 +1914,10 @@
             </div>
             <div class="resource-desc">강사용</div>
             <div class="actions">
-              <a class="btn open" href="https://able0220.github.io/auction2/" target="_blank">새 탭 열기</a>
+              <a class="btn open" href="https://able0220.github.io/auction2/" target="_blank">열기</a>
               <button class="btn copy" data-copy="https://able0220.github.io/auction2/">링크 복사</button>
             </div>
+          </div>
           </div>
 
           <div class="resource-row">
@@ -1950,23 +1931,9 @@
               <a class="btn" href="./files/Management/economic-auction.hwp" download>다운로드</a>
             </div>
           </div>
-        </div>
-      </div>
-    </article>
-
-    <article class="program-box searchable" data-type="program" 
-      data-keywords="정책연구 정책 국정운영 시뮬레이션 성과기록 시트 활동지 유인물 한글 hwp pdf" data-password="1234">
-      <button class="accordion-btn" type="button">
-        <div class="accordion-left">
-          <h3>정책연구</h3>
-        </div>
-        <div class="accordion-right">
-          <div class="count-badge">2개</div>
-          <div class="accordion-icon">⌄</div>
-        </div>
-      </button>
-
-      <div class="accordion-panel">
+        
+        
+        <div class="item-subtitle">4️⃣ 정책 연구</div>
         <div class="resource-list">
           <div class="resource-row">
             <span class="type-badge type-site">SITE</span>
@@ -1975,7 +1942,7 @@
             </div>
             <div class="resource-desc">강사용</div>
             <div class="actions">
-              <a class="btn open" href="https://able0220.github.io/policy/" target="_blank">새 탭 열기</a>
+              <a class="btn open" href="https://able0220.github.io/policy/" target="_blank">열기</a>
               <button class="btn copy" data-copy="https://able0220.github.io/policy/">링크 복사</button>
             </div>
           </div>
@@ -1992,6 +1959,7 @@
             </div>
           </div>
         </div>
+
       </div>
     </article>
 
